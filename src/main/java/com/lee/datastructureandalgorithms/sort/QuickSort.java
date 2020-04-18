@@ -1,6 +1,5 @@
 package com.lee.datastructureandalgorithms.sort;
 
-
 /**
  * @author i324779
  */
@@ -12,19 +11,6 @@ public class QuickSort {
         for (int i : a) {
             System.out.printf("%d\t", i);
         }
-    }
-
-    /**
-     * 数组元素交换位置
-     *
-     * @param a
-     * @param i
-     * @param j
-     */
-    private static void swap(int[] a, int i, int j) {
-        int tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
     }
 
     /**
@@ -49,14 +35,12 @@ public class QuickSort {
         if (high <= low) {
             return;
         }
-
         // 需要对数组中low索引到high索引处的元素进行分组(左子组和右子组)
         // 返回的是分组的分界值所在的索引，分界值位置变换后的索引
         int partition = partition(a, low, high);
 
         // 左子组排序
         sort(a, low, partition - 1);
-
         //右子组排序
         sort(a, partition + 1, high);
     }
@@ -101,5 +85,18 @@ public class QuickSort {
         swap(a, low, right);
 
         return right;
+    }
+
+    /**
+     * 数组元素交换位置
+     *
+     * @param a
+     * @param i
+     * @param j
+     */
+    private static void swap(int[] a, int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
     }
 }
