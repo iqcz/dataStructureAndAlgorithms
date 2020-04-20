@@ -59,7 +59,7 @@ public class QuickSort {
         //定义两个指针，分别指向待切分元素的最小索引处和最大索引处的下一个位置
         int left = low;
         int right = high + 1;
-        //切分
+        // 切分
         while (true) {
             // 先从右往左扫描，移动right指针，找到一个比分界值小的元素，停止
             while (pivot < a[--right]) {
