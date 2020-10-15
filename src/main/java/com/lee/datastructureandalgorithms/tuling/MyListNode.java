@@ -110,6 +110,7 @@ public class MyListNode {
         n4.setNext(null);
         printListNode(head);
 
+        System.out.println("Length:" + myListNode.listLength(head));
         // insert
         ListNode newNode = new ListNode(9);
         head = myListNode.insertListNode(head, newNode, 3);
