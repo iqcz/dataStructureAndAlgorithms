@@ -1,5 +1,7 @@
 package com.lee.datastructureandalgorithms.sort;
 
+import java.util.Arrays;
+
 /**
  * @author i324779
  */
@@ -8,9 +10,8 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] a = {3, 2, 5, 99, 34, 21, 98};
         quickSort(a);
-        for (int i : a) {
-            System.out.printf("%d\t", i);
-        }
+
+        System.out.println(Arrays.toString(a));
     }
 
     /**
