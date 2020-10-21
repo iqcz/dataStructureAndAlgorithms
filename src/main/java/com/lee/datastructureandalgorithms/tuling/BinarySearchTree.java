@@ -55,7 +55,7 @@ public class BinarySearchTree {
     /**
      * 中序遍历
      *
-     * @param root
+     * @param root 根节点
      */
     public void in(BinarySearchTree root) {
         if (root != null) {
