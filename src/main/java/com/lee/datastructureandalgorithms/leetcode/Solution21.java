@@ -7,6 +7,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  * <p>
  * 输入：1->2->4, 1->3->4
  * 输出：1->1->2->3->4->4
+ *
  * @author i324779
  */
 public class Solution21 {
@@ -23,5 +24,24 @@ public class Solution21 {
             l2.setNext(mergeTwoLists(l1, l2.getNext()));
             return l2;
         }
+    }
+
+    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+        ListNode preHead = new ListNode(-1);
+        ListNode previous = preHead;
+        while (l1 != null && l2 != null) {
+            if (l1.getData() <= l2.getData()) {
+                previous.setNext(l1);
+                l1 = l1.getNext();
+            } else {
+                previous.setNext(l2);
+                l2 = l2.getNext();
+            }
+            previous = previous.getNext();
+        }
+
+        previous.setNext(l1 == null ? l2 : l1);
+
+        return preHead.getNext();
     }
 }
