@@ -9,11 +9,9 @@ public class CountSort {
     public static void main(String[] args) {
 
         int[] arr = {2, 4, 2, 3, 7, 1, 1, 0, 0, 5, 6, 9, 8, 5, 7, 4, 0, 9};
-
         int[] result = sort(arr);
 
         System.out.println(Arrays.toString(result));
-
     }
 
     public static int[] sort(int[] arr) {
