@@ -21,7 +21,9 @@ public class Solution15 {
 
     public List<List<Integer>> threeSum(int[] nums) {
         if (nums == null || nums.length == 0) {
-            return
+            return null;
         }
+
+        return null;
     }
 }
