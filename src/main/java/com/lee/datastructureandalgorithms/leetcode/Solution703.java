@@ -24,7 +24,7 @@ public class Solution703 {
 
     public static void main(String[] args) {
         int[] a = {3, 4, 1, 9, 5, 6};
-        KthLargest kthLargest = new KthLargest(3,a);
+        KthLargest kthLargest = new KthLargest(3, a);
         System.out.println(kthLargest.add(8));
     }
 }
