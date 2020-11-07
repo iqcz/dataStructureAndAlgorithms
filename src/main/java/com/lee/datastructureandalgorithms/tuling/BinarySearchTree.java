@@ -1,5 +1,7 @@
 package com.lee.datastructureandalgorithms.tuling;
 
+import java.util.ArrayDeque;
+
 /**
  * 二叉搜索数
  *
@@ -62,6 +64,25 @@ public class BinarySearchTree {
             in(root.left);
             System.out.print(root.data + " ");
             in(root.right);
+        }
+    }
+
+    /**
+     * 层次遍历
+     * @param root
+     */
+    public void level(BinarySearchTree root) {
+        ArrayDeque<BinarySearchTree> queue = new ArrayDeque<>(20);
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            BinarySearchTree tmp = queue.poll();
+            System.out.print(tmp.data + " ");
+            if (tmp.left != null) {
+                queue.add(tmp.left);
+            }
+            if (tmp.right != null) {
+                queue.add(tmp.right);
+            }
         }
     }
 

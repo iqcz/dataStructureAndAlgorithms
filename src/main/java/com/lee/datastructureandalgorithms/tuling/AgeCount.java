@@ -18,7 +18,9 @@ public class AgeCount {
 
         long start = System.currentTimeMillis();
         BufferedReader br = new BufferedReader(isr);
-        int total = 0;    //21亿
+        //21亿
+        int total = 0;
+        //200：年龄范围
         int[] data = new int[200];
         //一行一行的读 O(n)
         while ((str = br.readLine()) != null) {
