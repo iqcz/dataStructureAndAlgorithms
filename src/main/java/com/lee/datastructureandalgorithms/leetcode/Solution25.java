@@ -5,6 +5,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution25 {
     public ListNode reverseKGroup(ListNode head, int k) {
+        // 哨兵
         ListNode dummy = new ListNode(0);
         dummy.setNext(head);
 
@@ -24,7 +25,6 @@ public class Solution25 {
             pre.setNext(reverse(start));
             start.setNext(next);
             pre = start;
-
             end = pre;
         }
         return dummy.getNext();
