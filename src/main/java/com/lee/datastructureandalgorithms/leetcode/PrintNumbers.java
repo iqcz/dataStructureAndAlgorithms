@@ -1,8 +1,12 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+/**
+ * @author osyuj
+ *
+ */
 public class PrintNumbers {
 
-    private static final Object lock = new Object();
+    private static final Object LOCK = new Object();
 
     private static int counter = 1;
 
@@ -10,51 +14,45 @@ public class PrintNumbers {
 
     public static void main(String[] args) {
         // 奇数打印线程
-        Thread oddThread = new Thread() {
-            @Override
-            public void run() {
-                synchronized (lock) {
-                    while (counter <= MAX_COUNTER) {
-                        // counter为奇数，打印counter并唤醒偶数打印线程
-                        if (counter % 2 != 0) {
-                            System.out.println("Thread1 : " + counter);
-                            counter = counter + 1;
-                            lock.notifyAll();
-                        } else {
-                            // counter为偶数，挂起并等待偶数打印线程唤醒
-                            try {
-                                lock.wait();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+        Thread oddThread = new Thread(() -> {
+            synchronized (LOCK) {
+                while (counter <= MAX_COUNTER) {
+                    // counter为奇数，打印counter并唤醒偶数打印线程
+                    if (counter % 2 != 0) {
+                        System.out.println("Thread1 : " + counter);
+                        counter = counter + 1;
+                        LOCK.notifyAll();
+                    } else {
+                        // counter为偶数，挂起并等待偶数打印线程唤醒
+                        try {
+                            LOCK.wait();
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
                     }
                 }
             }
-        };
+        });
 
         // 偶数打印线程
-        Thread evenThread = new Thread() {
-            @Override
-            public void run() {
-                synchronized (lock) {
-                    while (counter <= MAX_COUNTER) {
-                        if (counter % 2 == 0) {
-                            System.out.println("Thread2 : " + counter);
-                            counter = counter + 1;
-                            lock.notifyAll();
-                        } else {
-                            // counter为奇数，挂起并等待奇数打印线程唤醒
-                            try {
-                                lock.wait();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+        Thread evenThread = new Thread(() -> {
+            synchronized (LOCK) {
+                while (counter <= MAX_COUNTER) {
+                    if (counter % 2 == 0) {
+                        System.out.println("Thread2 : " + counter);
+                        counter = counter + 1;
+                        LOCK.notifyAll();
+                    } else {
+                        // counter为奇数，挂起并等待奇数打印线程唤醒
+                        try {
+                            LOCK.wait();
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
                     }
                 }
             }
-        };
+        });
 
         oddThread.start();
         evenThread.start();
