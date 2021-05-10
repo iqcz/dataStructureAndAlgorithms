@@ -6,7 +6,8 @@ package com.lee.datastructureandalgorithms.leetcode;
 public class Solution125 {
     public boolean isPalindrome(String s) {
         int n = s.length();
-        int left = 0, right = n - 1;
+        int left = 0;
+        int right = n - 1;
         while (left < right) {
             while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
                 ++left;
