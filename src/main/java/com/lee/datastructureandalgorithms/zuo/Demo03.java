@@ -16,13 +16,15 @@ public class Demo03 {
             return -1;
         }
         int left = 0;
-        int rigt = data.length - 1;
+        int right = data.length - 1;
+        // 记录满足要求最左下标位置
         int index = -1;
-        while (left <= rigt) {
-            int middle = left + (rigt - left) / 2;
+        while (left <= right) {
+//            int middle = left + (right - left) / 2;
+            int middle = left + ((right - left) >> 1);
             if (data[middle] >= num) {
                 index = middle;
-                rigt = middle - 1;
+                right = middle - 1;
             } else {
                 left = middle + 1;
             }
