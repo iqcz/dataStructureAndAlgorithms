@@ -20,7 +20,7 @@ public class Code0006 {
 
         while (cur != null) {
             if (cur.getData() == value) {
-                pre.setNext(cur.getNext());
+                pre.setNext(cur.getNext()); 
             } else {
                 pre = cur;
             }
