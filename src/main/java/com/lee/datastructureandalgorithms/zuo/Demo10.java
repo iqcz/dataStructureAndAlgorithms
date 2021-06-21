@@ -21,6 +21,7 @@ public class Demo10 {
             return arr[left];
         }
 //        int middle = left + (right - left) / 2;
+        // 取中点，防止溢出
         int middle = left + ((right - left) >> 1);
         int leftValue = process(arr, left, middle);
         int rightValue = process(arr, middle + 1, right);
