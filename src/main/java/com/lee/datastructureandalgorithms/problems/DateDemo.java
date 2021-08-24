@@ -12,7 +12,9 @@ public class DateDemo {
 
         LocalDate localDate = LocalDate.parse("2020-06-01");
         System.out.println("localDate = " + localDate);
+
         LocalTime localTime = LocalTime.parse("12:23:44");
+        System.out.println("localTime = " + localTime);
 
         DateTimeFormatter dateFormatter
                 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -24,20 +26,24 @@ public class DateDemo {
                 = DateTimeFormatter.ofPattern("HH|mm|ss");
         LocalTime localTimeFormatted
                 = LocalTime.parse("12|23|44", timeFormatter);
+        System.out.println("localTimeFormatted = " + localTimeFormatted);
 
+        System.out.println("-----------------------------");
         // yyyy-MM-dd HH:mm:ss
         LocalDateTime localDateTime = LocalDateTime.now();
         DateTimeFormatter formatterLocalDateTime
                 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String stringLDT
                 = formatterLocalDateTime.format(localDateTime);
+        System.out.println("stringLDT = " + stringLDT);
 
         // or shortly
         String stringLDTShort = LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        System.out.println("stringLDTShort = " + stringLDTShort);
 
         Instant timestamp = Instant.now();
-        System.out.println(timestamp);
+        System.out.println("timestamp = " + timestamp);
 
         Period fromDays = Period.ofDays(120);
         System.out.println("fromDays = " + fromDays);
