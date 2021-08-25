@@ -85,5 +85,20 @@ public class DateDemo {
         System.out.println("ldDayEnd = " + ldDayEnd);
 
 
+        //  get the current date//time
+
+        LocalDate onlyDate = LocalDate.now();
+        LocalTime onlyTime = LocalTime.now();
+        System.out.println("onlyDate = " + onlyDate);
+        System.out.println("onlyTime = " + onlyTime);
+
+        // LocalDateTime
+        LocalDateTime ldt = LocalDateTime.of(2021, 8, 25, 23, 18, 23, 222);
+        System.out.println("ldt = " + ldt);
+        LocalDateTime ldt1 = LocalDateTime.of(onlyDate, onlyTime);
+        System.out.println("ldt1 = " + ldt1);
+        String localDateTimeAsString = ldt
+                .format(DateTimeFormatter.ofPattern("yyyy-MMM-dd hh:mm:ss a"));
+        System.out.println("localDateTimeAsString = " + localDateTimeAsString);
     }
 }
