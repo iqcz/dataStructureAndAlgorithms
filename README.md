@@ -1,2 +1,3 @@
 # dataStructureAndAlgorithms
 HyperFocus
+be strong.
