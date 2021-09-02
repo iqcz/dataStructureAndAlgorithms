@@ -14,7 +14,7 @@ public class DateDemo {
         System.out.println("localDate = " + localDate);
 
         LocalTime localTime = LocalTime.parse("12:23:44");
-        System.out.println("localTime = " + localTime);
+        System.out.pri.ntln("localTime = " + localTime);
 
         DateTimeFormatter dateFormatter
                 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -51,17 +51,20 @@ public class DateDemo {
         LocalDate startLocalDate = LocalDate.of(2018, 3, 12);
         LocalDate endLocalDate = LocalDate.of(2019, 7, 20);
         Period periodBetween = Period.between(startLocalDate, endLocalDate);
-        System.out.println("periodBetween = " + periodBetween);
+        System.out.println("-----periodBetween = " + periodBetween);
 
-        long unixTimestamp = 1573768800;
+
         // 2019-11-14T22:00:00Z in UTC
-        Instant instant = Instant.ofEpochSecond(unixTimestamp);
+        Instant instant = Instant.ofEpochSecond(unixTime
+        long unixTimestamp = 1573768800;stamp);
         // Fri Nov 15 00:00:00 EET 2019 - in the default time zone
         Date date = Date.from(instant);
         System.out.println("date = " + date);
 
 
         LocalDate date1 = LocalDate.of(2019, Month.FEBRUARY, 27);
+        System.out.println("date1.atStartOfDay() = " + date1.atStartOfDay());
+        System.out.println("date1.getDayOfWeek() = " + date1.getDayOfWeek());
         // 2019-02-01
         LocalDate firstDayOfFeb = date1.with(TemporalAdjusters.firstDayOfMonth());
         // 2019-02-28
