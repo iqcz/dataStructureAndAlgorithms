@@ -4,6 +4,7 @@ import com.lee.datastructureandalgorithms.leetcode.ListNode;
 
 /**
  * 单链表操作
+ *
  * @author i324779
  */
 public class MyListNode {
@@ -94,6 +95,41 @@ public class MyListNode {
         System.out.println();
     }
 
+    /**
+     * 迭代反转
+     * @param head
+     * @return
+     */
+    private static ListNode reverse(ListNode head) {
+        ListNode previous = null;
+        ListNode next;
+        ListNode current;
+
+        current = head;
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
+
+    /**
+     * 递归翻转
+     * @param head
+     * @return
+     */
+    private static ListNode reverseRecursion(ListNode head) {
+        if (head == null || head.getNext() == null) {
+            return head;
+        }
+        ListNode newHead = reverseRecursion(head.getNext());
+        head.getNext().setNext(head);
+        head.setNext(null);
+        return newHead;
+    }
+
     public static void main(String[] args) {
         MyListNode myListNode = new MyListNode();
 
@@ -112,12 +148,15 @@ public class MyListNode {
 
         System.out.println("Length:" + myListNode.listLength(head));
         // insert
-        ListNode newNode = new ListNode(9);
-        head = myListNode.insertListNode(head, newNode, 3);
-        printListNode(head);
+//        ListNode newNode = new ListNode(9);
+//        head = myListNode.insertListNode(head, newNode, 3);
+//        printListNode(head);
 
         // delete
-        head = myListNode.deleteNode(head, 1);
-        printListNode(head);
+//        head = myListNode.deleteNode(head, 1);
+//        printListNode(head);
+
+        ListNode recursionReverseListNode = reverseRecursion(head);
+        printListNode(recursionReverseListNode);
     }
 }
