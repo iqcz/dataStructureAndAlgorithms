@@ -14,7 +14,7 @@ public class DateDemo {
         System.out.println("localDate = " + localDate);
 
         LocalTime localTime = LocalTime.parse("12:23:44");
-        System.out.pri.ntln("localTime = " + localTime);
+        System.out.println("localTime = " + localTime);
 
         DateTimeFormatter dateFormatter
                 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -55,8 +55,8 @@ public class DateDemo {
 
 
         // 2019-11-14T22:00:00Z in UTC
-        Instant instant = Instant.ofEpochSecond(unixTime
-        long unixTimestamp = 1573768800;stamp);
+        long unixTimestamp = 1573768800;
+        Instant instant = Instant.ofEpochSecond(unixTimestamp);
         // Fri Nov 15 00:00:00 EET 2019 - in the default time zone
         Date date = Date.from(instant);
         System.out.println("date = " + date);
