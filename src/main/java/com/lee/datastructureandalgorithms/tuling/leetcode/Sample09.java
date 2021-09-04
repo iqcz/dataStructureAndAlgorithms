@@ -12,7 +12,7 @@ public class Sample09 {
         int[] nums = {-9, -5, 2, 4, 7};
         System.out.println("maxBySort(nums) = " + maxBySort(nums));
     }
-    
+
     public static int maxBySort(int[] nums) {
         Arrays.sort(nums);
         int length = nums.length;
