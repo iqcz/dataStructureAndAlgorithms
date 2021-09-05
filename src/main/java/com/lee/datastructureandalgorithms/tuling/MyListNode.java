@@ -87,7 +87,7 @@ public class MyListNode {
         return headNode;
     }
 
-    private static void printListNode(ListNode head) {
+    public static void printListNode(ListNode head) {
         while (head != null) {
             System.out.print(head.getData() + "\t");
             head = head.getNext();
