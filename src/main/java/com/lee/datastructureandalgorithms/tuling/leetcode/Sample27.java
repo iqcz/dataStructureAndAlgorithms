@@ -2,6 +2,8 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
 
 import com.lee.datastructureandalgorithms.leetcode.TreeNode;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -22,7 +24,10 @@ public class Sample27 {
         preOrder(node1);
         System.out.println("=============");
         middleOrder(node1);
-
+        System.out.println("=============");
+        postOrder(node1);
+        System.out.println("=============");
+        levelOrder(node1);
     }
 
     public static void preOrder(TreeNode root) {
@@ -54,6 +59,51 @@ public class Sample27 {
                 root = stack.pop();
                 System.out.println(root.val);
                 root = root.right;
+            }
+        }
+    }
+
+    /**
+     * 迭代后序遍历
+     *
+     * @param root
+     */
+    public static void postOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode prev = null;
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (root.right == null || root.right == prev) {
+                System.out.println(root.val);
+                prev = root;
+                root = null;
+            } else {
+                stack.push(root);
+                root = root.right;
+            }
+        }
+    }
+
+    /**
+     * 迭代层次遍历
+     * @param root
+     */
+    public static void levelOrder(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            if (node != null) {
+                System.out.println(node.val);
+                queue.add(node.left);
+                queue.add(node.right);
             }
         }
     }
