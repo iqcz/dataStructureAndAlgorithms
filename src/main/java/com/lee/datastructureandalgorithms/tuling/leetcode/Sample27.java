@@ -30,6 +30,10 @@ public class Sample27 {
         levelOrder(node1);
     }
 
+    /**
+     * 迭代前序遍历
+     * @param root
+     */
     public static void preOrder(TreeNode root) {
         if (root == null) {
             return;
@@ -46,6 +50,10 @@ public class Sample27 {
         }
     }
 
+    /**
+     * 迭代中序遍历
+     * @param root
+     */
     public static void middleOrder(TreeNode root) {
         if (root == null) {
             return;
