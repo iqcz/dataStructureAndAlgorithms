@@ -23,7 +23,6 @@ public class MergeSort {
     private static void merge(int[] arr, int left, int mid, int right) {
         // 借助一个临时数组保存合并的数据
         int[] temp = new int[arr.length];
-
         // 左边第一个数的位置
         int point1 = left;
         // 右边第一个数的位置

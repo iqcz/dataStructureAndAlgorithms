@@ -36,7 +36,6 @@ public class ShellSort {
         }
     }
 
-
     public static void shellSort2(int[] arr) {
         int h = 1;
         while (h <= arr.length / 3) {
@@ -44,7 +43,6 @@ public class ShellSort {
         }
 
         for (int gap = h; gap > 0; gap = (gap - 1) / 3) {
-
             for (int i = gap; i < arr.length; i++) {
                 for (int j = i; j > gap - 1; j -= gap) {
                     if (arr[j] < arr[j - gap]) {
