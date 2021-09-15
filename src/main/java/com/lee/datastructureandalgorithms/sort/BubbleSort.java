@@ -17,7 +17,9 @@ public class BubbleSort {
         int length = data.length;
         //排序的次数
         for (int i = 0; i < length - 1; i++) {
+            // 是否发生交换
             boolean flag = false;
+            // length - 1 - i：后面已经有i个确定的排好序的元素了。
             for (int j = 0; j < length - 1 - i; j++) {
                 if (data[j] > data[j + 1]) {
                     int temp = data[j];
