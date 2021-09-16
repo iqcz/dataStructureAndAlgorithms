@@ -21,6 +21,8 @@ public class Sample21 {
         preOrder(node1);
         System.out.println("========");
         middleOrder(node1);
+        System.out.println("========");
+        postOrder(node1);
     }
 
     private static void preOrder(TreeNode root) {
@@ -39,5 +41,14 @@ public class Sample21 {
         middleOrder(root.left);
         System.out.println(root.val);
         middleOrder(root.right);
+    }
+
+    private static void postOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.println(root.val);
     }
 }
