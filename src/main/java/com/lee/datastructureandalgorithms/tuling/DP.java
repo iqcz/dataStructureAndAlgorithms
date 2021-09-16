@@ -21,14 +21,15 @@ public class DP {
         int dp[][] = new int[n + 1][w + 1];
 
         // 每次加的物品
-        for (int i = 1; i <= n; i++) {    //每次加的物品
-            for (int cw = 1; cw <= w; cw++) {        //分割的背包
-                if (weights[i - 1] <= cw) {        //表示这个物品可以装进去
-                    dp[i][cw] = Math.max(
-                            values[i - 1] + dp[i - 1][cw - weights[i - 1]], dp[i - 1][cw]
-                    );
+        for (int i = 1; i <= n; i++) {
+            //分割的背包
+            for (int cw = 1; cw <= w; cw++) {
+                //表示这个物品可以装进去
+                if (weights[i - 1] <= cw) {
+                    dp[i][cw] = Math.max(values[i - 1] + dp[i - 1][cw - weights[i - 1]], dp[i - 1][cw]);
                 } else {
-                    dp[i][cw] = dp[i - 1][cw];    //不能装
+                    //不能装
+                    dp[i][cw] = dp[i - 1][cw];
                 }
             }
         }
