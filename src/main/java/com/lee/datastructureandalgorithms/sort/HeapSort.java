@@ -3,10 +3,11 @@ package com.lee.datastructureandalgorithms.sort;
 import java.util.Arrays;
 /**
  * @author i324779
+ * zhaoyun
  */
 public class HeapSort {
     /**
-     * 建一个大顶堆,end表示最多建到的点 lgn
+     * 建一个大顶堆,end表示最多建到的点 log(n)
      */
     public static void maxHeap(int[] data, int start, int end) {
         int parent = start;
