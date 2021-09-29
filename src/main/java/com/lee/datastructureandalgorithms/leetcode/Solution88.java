@@ -33,7 +33,7 @@ public class Solution88 {
     public static void main(String[] args) {
         // m = 3
         int[] nums1 = {1, 2, 3, 0, 0, 0, 0, 0};
-        // n = 3
+        // n = 4
         int[] nums2 = {2, 5, 6, 6};
 
         merge(nums1, 3, nums2, 4);

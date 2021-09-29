@@ -17,7 +17,6 @@ class Solution35 {
             }
         }
         return left;
-
     }
 
     public static void main(String[] args) {
