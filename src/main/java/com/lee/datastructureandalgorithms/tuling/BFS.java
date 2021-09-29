@@ -18,7 +18,8 @@ public class BFS {
     boolean mark[][]; // 标记数据 走过的位置
 
     /**
-     *  // x he y表示你当前的位置,就是求（x，y）->(dx,dy)能不能到
+     * // x 和 y表示你当前的位置,就是求（x，y）->(dx,dy)能不能到
+     *
      * @param x
      * @param y
      */
@@ -26,26 +27,28 @@ public class BFS {
         if (x < 1 || x > n || y < 1 || y > m) {
             return;
         }
+        // 判断起点就是目标
         if (x == dx && y == dy) {
             System.out.println("true");
             return;
         }
         mark[x][y] = true;
         // 因为最多也就是n*m个点
-        Queue<Point> queue = new ArrayBlockingQueue<Point>(n * m);
+        Queue<Point> queue = new ArrayBlockingQueue<>(n * m);
         Point start = new Point();
         start.x = x;
         start.y = y;
         queue.add(start);
-        // 经典
+        // 经典 下，右，上，左
         int[][] next = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-
-        while (!queue.isEmpty()) {        //O(n)
+        //O(n)
+        while (!queue.isEmpty()) {
             // 拿出队列的第一个点
             Point point = queue.poll();
             for (int i = 0; i < 4; i++) {
                 int nextx = point.x + next[i][0];
                 int nexty = point.y + next[i][1];
+                // 越界
                 if (nextx < 1 || nextx > n || nexty < 1 || nexty > m) {
                     continue;
                 }
@@ -65,6 +68,5 @@ public class BFS {
             }
         }
         System.out.println("false");
-        return;
     }
 }
