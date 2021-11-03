@@ -14,7 +14,7 @@ public class Demo05 {
             return false;
         }
 
-        if (p == null && q == null) {
+        if (p == null) {
             return true;
         }
 
