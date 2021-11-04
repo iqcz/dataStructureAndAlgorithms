@@ -50,6 +50,8 @@ public class Zen02 {
     }
 
     /**
+     *
+     * 用递推代码实现递推思想
      * 从root到每个叶子节点的路径和
      *
      * @param root
@@ -85,7 +87,7 @@ public class Zen02 {
     }
 
     /**
-     * 使用递归
+     * 用递归代码实现递推思想
      * @param root
      * @return
      */
