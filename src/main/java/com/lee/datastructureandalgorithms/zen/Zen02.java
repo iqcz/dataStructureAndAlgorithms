@@ -1,5 +1,7 @@
 package com.lee.datastructureandalgorithms.zen;
 
+import com.google.common.collect.Lists;
+
 import java.util.*;
 
 /**
@@ -13,8 +15,13 @@ public class Zen02 {
         System.out.println("root = " + root);
 
         System.out.println("getPathSums(node) = " + getPathSums(root));
-        System.out.println("==========================");
 
+        System.out.println("==========getPathSumsRecursion================");
+        List<Integer> sums = Lists.newArrayList();
+        getPathSumsRecursion(root, 0, sums);
+        System.out.println(sums);
+
+        System.out.println("==========getEveryPathSums================");
         Map<Node, Integer> everyPathSums = getEveryPathSums(root);
         for (Node node : everyPathSums.keySet()) {
             System.out.printf("Root to %d: %d\n", node.val, everyPathSums.get(node));
@@ -75,6 +82,24 @@ public class Zen02 {
         }
 
         return sums;
+    }
+
+    /**
+     * 使用递归
+     * @param root
+     * @return
+     */
+    public static void getPathSumsRecursion(Node root, int parentSum, List<Integer> sums) {
+        if (root == null) {
+            return;
+        }
+        int curSum = root.val + parentSum;
+        if (root.left == null || root.right == null) {
+            sums.add(curSum);
+        }
+        getPathSumsRecursion(root.left, curSum, sums);
+        getPathSumsRecursion(root.right, curSum, sums);
+
     }
 
     public static Map<Node, Integer> getEveryPathSums(Node root) {
