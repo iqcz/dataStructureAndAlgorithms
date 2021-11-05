@@ -37,6 +37,11 @@ public class Solution53 {
         return ans;
     }
 
+    // 分治法
+    // 动态规划
+    // 前缀和
+
+
     public static void main(String[] args) {
         int[] data = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(data));

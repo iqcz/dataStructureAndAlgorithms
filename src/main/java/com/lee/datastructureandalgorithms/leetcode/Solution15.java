@@ -1,5 +1,9 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+import com.google.common.collect.Lists;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -19,11 +23,48 @@ import java.util.List;
  */
 public class Solution15 {
 
-    public List<List<Integer>> threeSum(int[] nums) {
+    /**
+     * 考虑双指针；
+     * 排序；
+     * 一层循环固定一个元素，循环内部利用双指针找出剩下的两个元素。
+     * 注意：去重；
+     *
+     * @param nums
+     * @return
+     */
+    public static List<List<Integer>> threeSum(int[] nums) {
         if (nums == null || nums.length == 0) {
-            return null;
+            return Lists.newArrayList();
         }
 
-        return null;
+        int length = nums.length;
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+
+        for (int i = 0; i < length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int left = i + 1;
+            int right = length - 1;
+            while (left < right) {
+                if (nums[i] + nums[left] + nums[right] < 0) {
+                    left += 1;
+                } else if (nums[i] + nums[left] + nums[right] > 0) {
+                    right -= 1;
+                } else {
+                    res.add(new ArrayList<>(Arrays.asList(nums[i], nums[left], nums[right])));
+                    while (left < right && nums[left] == nums[left + 1]) {
+                        left += 1;
+                    }
+                    while (left < right && nums[right] == nums[right - 1]) {
+                        right -= 1;
+                    }
+                    left += 1;
+                    right -= 1;
+                }
+            }
+        }
+        return res;
     }
 }
