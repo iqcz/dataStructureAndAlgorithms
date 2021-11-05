@@ -26,6 +26,14 @@ public class Zen02 {
         for (Node node : everyPathSums.keySet()) {
             System.out.printf("Root to %d: %d\n", node.val, everyPathSums.get(node));
         }
+
+        System.out.println("==========collectSums================");
+        List<Integer> sums1 = collectSums(root);
+        System.out.println("sums1 = " + sums1);
+
+        System.out.println("==========collectSumsEnhance================");
+        List<Integer> sums2 = collectSumsEnhance(root);
+        System.out.println("sums2 = " + sums2);
     }
 
     /**
@@ -131,6 +139,56 @@ public class Zen02 {
                 nodeQ.offer(curNode.right);
                 sums.put(curNode.right, curSum + curNode.right.val);
             }
+        }
+        return sums;
+    }
+
+    /**
+     * 用递归代码实现递归思想
+     * @param node
+     * @return
+     */
+    public static List<Integer> collectSums(Node node) {
+        List<Integer> sums = Lists.newArrayList();
+        if (node == null) {
+            return sums;
+        }
+
+        sums.addAll(collectSums(node.left));
+        sums.addAll(collectSums(node.right));
+
+        for (int i = 0; i < sums.size(); i++) {
+            sums.set(i, sums.get(i) + node.val);
+        }
+
+        if (sums.isEmpty()) {
+            sums.add(node.val);
+        }
+
+        return sums;
+    }
+    /**
+     * 用递归代码实现递归思想：改进版
+     * @param node
+     * @return
+     */
+    public static List<Integer> collectSumsEnhance(Node node) {
+        List<Integer> sums = Lists.newArrayList();
+        // 越界补偿
+        if (node == null) {
+            return sums;
+        }
+
+        for (int sum : collectSumsEnhance(node.left)) {
+            sums.add(sum + node.val);
+        }
+
+        for (int sum : collectSumsEnhance(node.right)) {
+            sums.add(sum + node.val);
+        }
+        if (sums.isEmpty()) {
+            // 左右孩子均为null
+            sums.add(node.val);
         }
         return sums;
     }
