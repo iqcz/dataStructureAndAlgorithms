@@ -1,5 +1,7 @@
 package com.lee.datastructureandalgorithms.zen;
 
+import com.google.common.collect.Lists;
+
 import java.util.*;
 
 /**
@@ -13,12 +15,25 @@ public class Zen02 {
         System.out.println("root = " + root);
 
         System.out.println("getPathSums(node) = " + getPathSums(root));
-        System.out.println("==========================");
 
+        System.out.println("==========getPathSumsRecursion================");
+        List<Integer> sums = Lists.newArrayList();
+        getPathSumsRecursion(root, 0, sums);
+        System.out.println(sums);
+
+        System.out.println("==========getEveryPathSums================");
         Map<Node, Integer> everyPathSums = getEveryPathSums(root);
         for (Node node : everyPathSums.keySet()) {
             System.out.printf("Root to %d: %d\n", node.val, everyPathSums.get(node));
         }
+
+        System.out.println("==========collectSums================");
+        List<Integer> sums1 = collectSums(root);
+        System.out.println("sums1 = " + sums1);
+
+        System.out.println("==========collectSumsEnhance================");
+        List<Integer> sums2 = collectSumsEnhance(root);
+        System.out.println("sums2 = " + sums2);
     }
 
     /**
@@ -43,6 +58,8 @@ public class Zen02 {
     }
 
     /**
+     *
+     * 用递推代码实现递推思想
      * 从root到每个叶子节点的路径和
      *
      * @param root
@@ -77,6 +94,24 @@ public class Zen02 {
         return sums;
     }
 
+    /**
+     * 用递归代码实现递推思想
+     * @param root
+     * @return
+     */
+    public static void getPathSumsRecursion(Node root, int parentSum, List<Integer> sums) {
+        if (root == null) {
+            return;
+        }
+        int curSum = root.val + parentSum;
+        if (root.left == null || root.right == null) {
+            sums.add(curSum);
+        }
+        getPathSumsRecursion(root.left, curSum, sums);
+        getPathSumsRecursion(root.right, curSum, sums);
+
+    }
+
     public static Map<Node, Integer> getEveryPathSums(Node root) {
         HashMap<Node, Integer> sums = new HashMap<>(16);
         Queue<Node> nodeQ = new LinkedList<>();
@@ -104,6 +139,56 @@ public class Zen02 {
                 nodeQ.offer(curNode.right);
                 sums.put(curNode.right, curSum + curNode.right.val);
             }
+        }
+        return sums;
+    }
+
+    /**
+     * 用递归代码实现递归思想
+     * @param node
+     * @return
+     */
+    public static List<Integer> collectSums(Node node) {
+        List<Integer> sums = Lists.newArrayList();
+        if (node == null) {
+            return sums;
+        }
+
+        sums.addAll(collectSums(node.left));
+        sums.addAll(collectSums(node.right));
+
+        for (int i = 0; i < sums.size(); i++) {
+            sums.set(i, sums.get(i) + node.val);
+        }
+
+        if (sums.isEmpty()) {
+            sums.add(node.val);
+        }
+
+        return sums;
+    }
+    /**
+     * 用递归代码实现递归思想：改进版
+     * @param node
+     * @return
+     */
+    public static List<Integer> collectSumsEnhance(Node node) {
+        List<Integer> sums = Lists.newArrayList();
+        // 越界补偿
+        if (node == null) {
+            return sums;
+        }
+
+        for (int sum : collectSumsEnhance(node.left)) {
+            sums.add(sum + node.val);
+        }
+
+        for (int sum : collectSumsEnhance(node.right)) {
+            sums.add(sum + node.val);
+        }
+        if (sums.isEmpty()) {
+            // 左右孩子均为null
+            sums.add(node.val);
         }
         return sums;
     }

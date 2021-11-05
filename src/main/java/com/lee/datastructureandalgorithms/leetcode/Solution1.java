@@ -2,6 +2,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -28,6 +29,8 @@ import java.util.stream.Collectors;
  */
 public class Solution1 {
     public static int[] twoSum(int[] nums, int target) {
+        // key：数组中元素的值
+        // value：元素在数组中的下标
         Map<Integer, Integer> map = new HashMap<>(16);
         for (int i = 0; i < nums.length; i++) {
             int tmp = target - nums[i];
@@ -44,6 +47,7 @@ public class Solution1 {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        System.out.println(Arrays.stream(twoSum(nums, target)).boxed().collect(Collectors.toList()));
+        List<Integer> indexes = Arrays.stream(twoSum(nums, target)).boxed().collect(Collectors.toList());
+        System.out.println("indexes = " + indexes);
     }
 }

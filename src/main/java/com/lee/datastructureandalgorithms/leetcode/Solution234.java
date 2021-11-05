@@ -7,6 +7,11 @@ import java.util.Stack;
  * @author osyuj
  */
 public class Solution234 {
+    /**
+     * 使用栈
+     * @param head
+     * @return
+     */
     public boolean isPalindrome(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
         ListNode current = head;
@@ -22,5 +27,14 @@ public class Solution234 {
             head = head.getNext();
         }
         return true;
+    }
+
+    /**
+     * 使用快慢指针，找到中点；
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome1(ListNode head) {
+        return false;
     }
 }
