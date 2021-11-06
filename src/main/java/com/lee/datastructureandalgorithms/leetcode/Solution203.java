@@ -4,6 +4,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  * @author osyuj
  */
 public class Solution203 {
+    // todo 验证
     public ListNode removeElements(ListNode head, int val) {
         // 使用哨兵，只在head的前面
         ListNode sentinel = new ListNode();
@@ -21,4 +22,24 @@ public class Solution203 {
 
         return sentinel.getNext();
     }
+
+    public static void main(String[] args) {
+
+    }
 }
+
+/*
+ *  public ListNode removeElements(ListNode head, int val) {
+ *         ListNode sentinel = new ListNode(0);
+ *         sentinel.next = head;
+ *         ListNode current = sentinel;
+ *         while (current.next != null) {
+ *             if (current.next.val == val) {
+ *                 current.next = current.next.next;
+ *             } else {
+ *                 current = current.next;
+ *             }
+ *         }
+ *         return sentinel.next;
+ *     }
+ */

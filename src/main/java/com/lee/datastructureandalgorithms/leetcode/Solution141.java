@@ -23,4 +23,22 @@ public class Solution141 {
         }
         return false;
     }
+
+    public boolean hasCycle1(ListNode head) {
+        if (head == null || head.getNext() == null) {
+            return false;
+        }
+
+        ListNode slow = head;
+        ListNode fast = head.getNext();
+        while (slow != fast) {
+            if (fast == null || fast.getNext() == null) {
+                return false;
+            }
+
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
+        }
+        return true;
+    }
 }
