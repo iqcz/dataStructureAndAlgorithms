@@ -1,44 +1,42 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
-public class Solution141 {
-    public boolean hasCycle(ListNode head) {
-        if (head == null) {
-            return false;
-        }
-
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast.getNext() != null) {
-            fast = fast.getNext();
-            if (fast.getNext() == null) {
-                return false;
-            }
-            fast = fast.getNext();
-            slow = slow.getNext();
-
-            if (fast == slow) {
-                return true;
-            }
-        }
-        return false;
+/**
+ * 思路：使用快慢指针，找到链表的中点位置，然后归并排序
+ */
+public class Solution148 {
+    public ListNode sortList(ListNode head) {
+        return sort(head, null);
     }
 
-    public boolean hasCycle1(ListNode head) {
-        if (head == null || head.getNext() == null) {
-            return false;
+    private ListNode sort(ListNode start, ListNode end) {
+        if (start == end) {
+            return start;
         }
 
-        ListNode slow = head;
-        ListNode fast = head.getNext();
-        while (slow != fast) {
-            if (fast == null || fast.getNext() == null) {
-                return false;
-            }
-
-            slow = slow.getNext();
+        ListNode fast = start, slow = start;
+        while (fast != end && fast.getNext() != end) {
             fast = fast.getNext().getNext();
+            slow = slow.getNext();
         }
-        return true;
+        ListNode l2 = sort(slow.getNext(), end);
+        slow.setNext(null);
+        ListNode l1 = sort(start, slow);
+
+
+        return merge(l1, l2);
+    }
+
+    private ListNode merge(ListNode node1, ListNode node2) {
+        if (node1 == null || node2 == null) {
+            return node1 == null ? node2 : node1;
+        }
+
+        if (node1.getData() < node2.getData()) {
+            node1.setNext(merge(node1.getNext(), node2));
+            return node1;
+        } else {
+            node2.setNext(merge(node1, node2.getNext()));
+            return node2;
+        }
     }
 }
