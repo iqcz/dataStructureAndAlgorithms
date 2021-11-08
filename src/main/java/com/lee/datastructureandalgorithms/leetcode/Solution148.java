@@ -13,7 +13,8 @@ public class Solution148 {
             return start;
         }
 
-        ListNode fast = start, slow = start;
+        ListNode fast = start;
+        ListNode slow = start;
         while (fast != end && fast.getNext() != end) {
             fast = fast.getNext().getNext();
             slow = slow.getNext();
