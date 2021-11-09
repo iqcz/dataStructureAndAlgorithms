@@ -5,12 +5,10 @@ import java.util.concurrent.CompletableFuture;
 public class Stock {
     public static void main(String[] args) throws Exception {
         // 两个CompletableFuture执行异步查询:
-        CompletableFuture<String> cfQueryFromSina = CompletableFuture.supplyAsync(() -> {
-            return queryCode("中国石油", "https://finance.sina.com.cn/code/");
-        });
-        CompletableFuture<String> cfQueryFrom163 = CompletableFuture.supplyAsync(() -> {
-            return queryCode1("中国石油", "https://money.163.com/code/");
-        });
+        CompletableFuture<String> cfQueryFromSina = CompletableFuture
+                .supplyAsync(() -> queryCode("中国石油", "https://finance.sina.com.cn/code/"));
+        CompletableFuture<String> cfQueryFrom163 = CompletableFuture
+                .supplyAsync(() -> queryCode1("中国石油", "https://money.163.com/code/"));
 
         // 用anyOf合并为一个新的CompletableFuture:
         CompletableFuture<Object> cfQuery = CompletableFuture.anyOf(cfQueryFromSina, cfQueryFrom163);
@@ -43,7 +41,7 @@ public class Stock {
         long time = (long) (Math.random() * 100);
         try {
             Thread.sleep(time);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
         }
         System.out.println("queryCode:" + time);
         return "601857";
@@ -65,7 +63,7 @@ public class Stock {
         System.out.println("query price from " + url + "...");
         try {
             Thread.sleep((long) (Math.random() * 100));
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
         }
         return 5 + Math.random() * 20;
     }
