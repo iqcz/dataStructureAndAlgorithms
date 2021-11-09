@@ -1,6 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -37,6 +39,7 @@ public class Solution3 {
     public static void main(String[] args) {
         Solution3 solution3 = new Solution3();
         System.out.println(solution3.lengthOfLongestSubstring("pwwkew"));
+        System.out.println(solution3.lengthOfLongestSubstring1("pwwkew"));
     }
 
     public int lengthOfLongestSubstring(String s) {
@@ -59,6 +62,28 @@ public class Solution3 {
         }
 
         return maxLength;
+    }
+
+    /**
+     * 滑动窗口
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring1(String s) {
+        int res = 0;
+        int left = 0;
+        int right = 0;
+        Map<Character, Integer> map = new HashMap<>(16);
+        while (right < s.length() && left < s.length() - res) {
+            if (map.containsKey(s.charAt(right))) {
+                left = Math.max(left, map.get(s.charAt(right)) + 1);
+            }
+
+            map.put(s.charAt(right), right);
+            res = Math.max(res, right - left + 1);
+            right++;
+        }
+        return res;
     }
 }
 

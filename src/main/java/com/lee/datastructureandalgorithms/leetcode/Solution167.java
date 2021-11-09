@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 4，若left与right之和小于target，则left++，继续循环
  * 5，若left与right之和大于target，则right--，继续循环
  */
-public class Solution167 {
+public class    Solution167 {
     public int[] twoSum(int[] numbers, int target) {
         int left = 0;
         int right = numbers.length - 1;
