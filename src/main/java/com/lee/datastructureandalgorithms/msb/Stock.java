@@ -2,6 +2,9 @@ package com.lee.datastructureandalgorithms.msb;
 
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * @author D49450
+ */
 public class Stock {
     public static void main(String[] args) throws Exception {
         // 两个CompletableFuture执行异步查询:
@@ -53,7 +56,7 @@ public class Stock {
         try {
 
             Thread.sleep(time);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
         }
         System.out.println("queryCode111:" + time);
         return "111111";
