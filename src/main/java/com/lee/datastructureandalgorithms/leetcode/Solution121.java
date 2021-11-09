@@ -1,5 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+/**
+ * @author D49450
+ */
 public class Solution121 {
 
     public int maxProfit(int[] prices) {
