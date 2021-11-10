@@ -1,4 +1,5 @@
 # dataStructureAndAlgorithms
 HyperFocus
-be strong.
+Be strong.
 Fareless
+
