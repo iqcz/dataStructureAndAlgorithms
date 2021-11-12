@@ -1,20 +1,20 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
-import org.openjdk.jol.info.ClassLayout;
+//import org.openjdk.jol.info.ClassLayout;
 
 public class ObjectSize {
-    public static void main(String[] args) {
-        System.out.println("对象内存");
-        ClassLayout layout = ClassLayout.parseInstance(new Object());
-        System.out.println(layout.toPrintable());
-
-        System.out.println("数组内存");
-        ClassLayout layout1 = ClassLayout.parseInstance(new int[]{});
-        System.out.println(layout1.toPrintable());
-
-        System.out.println("MyObject对象内存");
-        ClassLayout layout2 = ClassLayout.parseInstance(new MyObject());
-        System.out.println(layout2.toPrintable());
+//    public static void main(String[] args) {
+//        System.out.println("对象内存");
+//        ClassLayout layout = ClassLayout.parseInstance(new Object());
+//        System.out.println(layout.toPrintable());
+//
+//        System.out.println("数组内存");
+//        ClassLayout layout1 = ClassLayout.parseInstance(new int[]{});
+//        System.out.println(layout1.toPrintable());
+//
+//        System.out.println("MyObject对象内存");
+//        ClassLayout layout2 = ClassLayout.parseInstance(new MyObject());
+//        System.out.println(layout2.toPrintable());
     }
 
     /**
