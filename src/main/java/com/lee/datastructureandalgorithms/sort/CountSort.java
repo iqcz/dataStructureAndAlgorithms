@@ -3,15 +3,19 @@ package com.lee.datastructureandalgorithms.sort;
 import java.util.Arrays;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class CountSort {
     public static void main(String[] args) {
 
         int[] arr = {2, 4, 2, 3, 7, 1, 1, 0, 0, 5, 6, 9, 8, 5, 7, 4, 0, 9};
         int[] result = sort(arr);
-
         System.out.println(Arrays.toString(result));
+        System.out.println("============================");
+
+        int[] arr1 = {2, 4, 2, 3, 7, 1, 1, 0, 0, 5, 6, 9, 8, 5, 7, 4, 0, 9};
+        int[] result1 = sortArray(arr1);
+        System.out.println(Arrays.toString(result1));
     }
 
     public static int[] sort(int[] arr) {
@@ -47,5 +51,28 @@ public class CountSort {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
+    }
+
+    public static int[] sortArray(int[] nums) {
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        for (int num : nums) {
+            min = Math.min(min, num);
+            max = Math.max(max, num);
+        }
+
+        int[] counts = new int[max - min + 1];
+        for (int num : nums) {
+            counts[num - min]++;
+        }
+        int i = 0;
+        for (int num = min; num <= max; num++) {
+            while (counts[num - min] > 0) {
+                nums[i++] = num;
+                counts[num - min]--;
+            }
+        }
+        return nums;
     }
 }
