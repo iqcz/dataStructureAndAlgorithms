@@ -20,29 +20,29 @@ public class MergeSort {
         }
     }
 
-    private static void merge(int[] arr, int left, int mid, int right) {
+    private static void merge(int[] arr, int left, int middle, int right) {
         // 借助一个临时数组保存合并的数据
         int[] temp = new int[arr.length];
         // 左边第一个数的位置
-        int point1 = left;
+        int leftBound = left;
         // 右边第一个数的位置
-        int point2 = mid + 1;
+        int rightBound = middle + 1;
         // 当前已经到的位置
         int loc = left;
 
-        while (point1 <= mid && point2 <= right) {
-            if (arr[point1] < arr[point2]) {
-                temp[loc++] = arr[point1++];
+        while (leftBound <= middle && rightBound <= right) {
+            if (arr[leftBound] < arr[rightBound]) {
+                temp[loc++] = arr[leftBound++];
             } else {
-                temp[loc++] = arr[point2++];
+                temp[loc++] = arr[rightBound++];
             }
         }
-        while (point1 <= mid) {
-            temp[loc++] = arr[point1++];
+        while (leftBound <= middle) {
+            temp[loc++] = arr[leftBound++];
         }
 
-        while (point2 <= right) {
-            temp[loc++] = arr[point2++];
+        while (rightBound <= right) {
+            temp[loc++] = arr[rightBound++];
         }
 
         //if (right + 1 - left >= 0) System.arraycopy(temp, left, arr, left, right + 1 - left);

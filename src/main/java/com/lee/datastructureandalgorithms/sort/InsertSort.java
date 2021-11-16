@@ -1,5 +1,9 @@
 package com.lee.datastructureandalgorithms.sort;
 
+/**
+ * 抓扑克牌
+ * @author D49450
+ */
 public class InsertSort {
 
     public static void insertSort(int[] a) {

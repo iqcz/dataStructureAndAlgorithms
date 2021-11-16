@@ -3,6 +3,7 @@ package com.lee.datastructureandalgorithms.sort;
 import java.util.Arrays;
 
 /**
+ * 两两比较，邻居好说话；
  * @author i324779
  */
 public class BubbleSort {
