@@ -1,5 +1,6 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -8,7 +9,13 @@ import java.util.LinkedList;
  * @author D49450
  */
 public class Solution239 {
-    public int[] maxSlidingWindow(int[] nums, int k) {
+
+    public static void main(String[] args) {
+        int [] nums = {1, 3, -3, 5, 3, 6, 7};
+        System.out.println("Arrays.toString(maxSlidingWindow(nums, 3)) = " + Arrays.toString(maxSlidingWindow(nums, 3)));
+    }
+
+    public static int[] maxSlidingWindow(int[] nums, int k) {
         if (k == 1) {
             return nums;
         }
