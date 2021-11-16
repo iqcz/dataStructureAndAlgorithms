@@ -3,6 +3,7 @@ package com.lee.datastructureandalgorithms.sort;
 import java.util.Arrays;
 
 /**
+ * 好好体会思想，而不是干巴巴地看代码；
  * @author i324779
  */
 public class MergeSort {
@@ -11,13 +12,16 @@ public class MergeSort {
             return;
         }
 
-        if (left < right) {
-            int mid = left + ((right - left) >> 1);
-            mergeSort(arr, left, mid);
-            mergeSort(arr, mid + 1, right);
-            // 分完了，要进行合并
-            merge(arr, left, mid, right);
+        if (left >= right) {
+            return;
         }
+
+        int mid = left + ((right - left) >> 1);
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        // 分完了，要进行合并
+        merge(arr, left, mid, right);
+
     }
 
     private static void merge(int[] arr, int left, int middle, int right) {
@@ -37,6 +41,7 @@ public class MergeSort {
                 temp[loc++] = arr[rightBound++];
             }
         }
+
         while (leftBound <= middle) {
             temp[loc++] = arr[leftBound++];
         }

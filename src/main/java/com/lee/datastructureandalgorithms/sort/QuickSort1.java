@@ -14,36 +14,36 @@ public class QuickSort1 {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void sort(int[] arr, int leftBound, int rightBound) {
-        if (leftBound >= rightBound) {
+    public static void sort(int[] arr, int left, int right) {
+        if (left >= right) {
             return;
         }
-        int mid = partition(arr, leftBound, rightBound);
-        sort(arr, leftBound, mid - 1);
-        sort(arr, mid + 1, rightBound);
+        int mid = partition(arr, left, right);
+        sort(arr, left, mid - 1);
+        sort(arr, mid + 1, right);
     }
 
-    static int partition(int[] arr, int leftBound, int rightBound) {
-        int pivot = arr[rightBound];
-        int left = leftBound;
-        int right = rightBound - 1;
+    static int partition(int[] arr, int left, int right) {
+        int pivot = arr[right];
+        int leftBound = left;
+        int rightBound = right - 1;
 
-        while (left <= right) {
-            while (left <= right && arr[left] <= pivot) {
-                left++;
+        while (leftBound <= rightBound) {
+            while (leftBound <= rightBound && arr[leftBound] <= pivot) {
+                leftBound++;
             }
-            while (left <= right && arr[right] > pivot) {
-                right--;
+            while (leftBound <= rightBound && arr[rightBound] > pivot) {
+                rightBound--;
             }
 
-            if (left < right) {
-                swap(arr, left, right);
+            if (leftBound < rightBound) {
+                swap(arr, leftBound, rightBound);
             }
         }
 
-        swap(arr, left, rightBound);
+        swap(arr, leftBound, right);
 
-        return left;
+        return leftBound;
     }
 
     static void swap(int[] arr, int i, int j) {
