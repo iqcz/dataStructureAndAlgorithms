@@ -4,7 +4,7 @@ package com.lee.datastructureandalgorithms.offer;
  * 输入一个字符串，求该字符串中不含重复字符的最长子字符串的长度。例如，输入字符串" babcca"，
  * 其最长的不含重复字符的子字符串是"abc"，长度为3。
  */
-public class Chapter16 {
+public class Question16 {
     public static void main(String[] args) {
         System.out.println("lengthOfLongestSubString(\"babcca\") = " + lengthOfLongestSubString("babcca"));
         System.out.println("lengthOfLongestSubString1(\"babcca\") = " + lengthOfLongestSubString1("babcca"));
