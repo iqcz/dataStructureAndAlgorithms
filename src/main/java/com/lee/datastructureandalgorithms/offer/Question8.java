@@ -1,5 +1,8 @@
 package com.lee.datastructureandalgorithms.offer;
 
+/**
+ * @author D49450
+ */
 public class Question8 {
 
     public static void main(String[] args) {
@@ -16,9 +19,11 @@ public class Question8 {
             sum += data[right];
             while (right > left && sum >= value) {
                 minLength = Math.min(minLength, right - left + 1);
-                sum -= data[left++];
+                sum -= data[left];
+                left++;
             }
         }
+        // 若没有满足条件的
         return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
 }
