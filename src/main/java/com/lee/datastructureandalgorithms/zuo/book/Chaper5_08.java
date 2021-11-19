@@ -6,8 +6,8 @@ package com.lee.datastructureandalgorithms.zuo.book;
  */
 public class Chaper5_08 {
     public static void main(String[] args) {
-//        String str = "dogs loves pig";
-        String str = "I'm a student.";
+        String str = "dogs loves pig";
+//        String str = "I'm a student.";
 
         char[] chars = str.toCharArray();
         rotateWord(chars);
@@ -20,9 +20,9 @@ public class Chaper5_08 {
         if (chars == null || chars.length == 0) {
             return;
         }
-
+        // 整体逆序
         reverse(chars, 0, chars.length - 1);
-
+        // gip sevol god
         int left = -1;
         int right = -1;
 
@@ -32,6 +32,7 @@ public class Chaper5_08 {
                 right = i == chars.length - 1 || chars[i + 1] == ' ' ? i : right;
             }
             if (left != -1 && right != -1) {
+                // 每个单词再逆序复位
                 reverse(chars, left, right);
                 left = -1;
                 right = -1;
