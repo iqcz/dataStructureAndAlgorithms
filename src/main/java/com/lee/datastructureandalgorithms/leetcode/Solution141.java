@@ -1,5 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+/**
+ * @author D49450
+ */
 public class Solution141 {
     public boolean hasCycle(ListNode head) {
         if (head == null) {
