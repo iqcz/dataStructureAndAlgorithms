@@ -1,2 +1,7 @@
-package com.lee.datastructureandalgorithms.leetcode;public class Solution1588 {
+package com.lee.datastructureandalgorithms.leetcode;
+
+/**
+ * @author D49450
+ */
+public class Solution1588 {
 }
