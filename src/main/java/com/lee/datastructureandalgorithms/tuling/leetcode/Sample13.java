@@ -6,7 +6,7 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
  * 给定一个数字 n，找出可形成完整阶梯行的总行数。
  * n 是一个非负整数，并且在32位有符号整型的范围内
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample13 {
     public static void main(String[] args) {

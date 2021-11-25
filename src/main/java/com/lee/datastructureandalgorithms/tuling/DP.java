@@ -4,7 +4,7 @@ package com.lee.datastructureandalgorithms.tuling;
  * 动态规划问题
  * 背包问题
  *
- * @author osyuj
+ * @author D49450
  */
 public class DP {
     public static void main(String[] args) {

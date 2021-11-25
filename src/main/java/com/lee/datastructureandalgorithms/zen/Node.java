@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * 二叉树定义
- * @author osyuj
+ * @author D49450
  */
 public class Node {
     public int val;

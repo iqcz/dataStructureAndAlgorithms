@@ -5,7 +5,7 @@ package com.lee.datastructureandalgorithms.tuling;
  * 2亿个整数占的内存大小：2亿 * 4 / 1024 / 1024 = 762.9M
  *
  * 内存限制500M，一台机器。
- * @author osyuj
+ * @author D49450
  */
 public class BitMap {
 

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * 贪心算法
- * @author osyuj
+ * @author D49450
  */
 public class MeetingSchedule {
     public static void main(String[] args) {

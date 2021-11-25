@@ -9,7 +9,7 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
  * <p>
  * 使用双指针算法
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample05 {
     public static void main(String[] args) {

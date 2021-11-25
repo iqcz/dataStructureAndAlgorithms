@@ -2,7 +2,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 /**
  * 快慢指针
- * @author osyuj
+ * @author D49450
  */
 public class Solution876 {
     public ListNode middleNode(ListNode head) {

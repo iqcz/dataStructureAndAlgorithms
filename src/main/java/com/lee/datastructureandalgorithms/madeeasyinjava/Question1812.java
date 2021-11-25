@@ -2,7 +2,7 @@ package com.lee.datastructureandalgorithms.madeeasyinjava;
 
 /**
  *
- * @author osyuj
+ * @author D49450
  */
 public class Question1812 {
 

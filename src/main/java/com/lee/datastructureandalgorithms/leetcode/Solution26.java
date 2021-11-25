@@ -3,7 +3,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 /**
  * 删除排序数组中的重复项
  *
- * @author osyuj
+ * @author D49450
  */
 public class Solution26 {
 

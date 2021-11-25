@@ -2,7 +2,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 /**
  * 爬楼梯
- * @author osyuj
+ * @author D49450
  */
 public class Solution70 {
     public int climbStairs(int n) {

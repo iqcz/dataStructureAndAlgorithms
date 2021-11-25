@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * 二叉树迭代遍历
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample27 {
     public static void main(String[] args) {

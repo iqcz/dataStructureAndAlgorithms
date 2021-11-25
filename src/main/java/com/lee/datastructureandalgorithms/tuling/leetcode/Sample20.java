@@ -12,7 +12,7 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
  * 输入：[10,10]
  * 输出：false
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample20 {
     public static void main(String[] args) {

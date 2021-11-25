@@ -3,7 +3,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 import java.util.Arrays;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Solution66 {
 

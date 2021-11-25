@@ -5,7 +5,7 @@ import com.lee.datastructureandalgorithms.leetcode.TreeNode;
 /**
  * 广度优先遍历
  *
- * @author osyuj
+ * @author D49450
  */
 public class QueueNode {
     TreeNode treeNode;

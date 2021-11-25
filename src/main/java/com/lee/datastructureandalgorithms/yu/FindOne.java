@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * 在数组1中找到数组2中不存在的字符。
- * @author osyuj
+ * @author D49450
  */
 public class FindOne {
 

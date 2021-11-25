@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 寻找数组的中心索引
  * 数组中某一个下标，左右两边的元素之后相等，该下标即为中心索引
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample06 {
     public static void main(String[] args) {

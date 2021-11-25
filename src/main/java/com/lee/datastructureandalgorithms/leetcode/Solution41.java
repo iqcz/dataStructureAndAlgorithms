@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * 还有好多方式
- * @author osyuj
+ * @author D49450
  */
 public class Solution41 {
     public static void main(String[] args) {

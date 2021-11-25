@@ -1,7 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Solution409 {
     public int longestPalindrome(String s) {

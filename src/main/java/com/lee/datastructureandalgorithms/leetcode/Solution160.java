@@ -3,7 +3,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 /**
  * 找到两个单链表相交的起始节点
  *
- * @author osyuj
+ * @author D49450
  */
 public class Solution160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。
  * 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
  *
- * @author osyuj
+ * @author D49450
  */
 public class Solution88 {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {

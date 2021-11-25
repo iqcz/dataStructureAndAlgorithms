@@ -5,7 +5,7 @@ import com.lee.datastructureandalgorithms.leetcode.TreeNode;
 /**
  * 二叉树前序遍历
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample21 {
 

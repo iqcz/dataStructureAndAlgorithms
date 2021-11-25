@@ -4,7 +4,7 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
  * 最长连续递增序列
  * 给定要给未经排序的整数数组，找到最长且连续递增的子序列，并返回该序列的长度。
  * 贪心算法
- * @author osyuj
+ * @author D49450
  */
 public class Sample19 {
 
