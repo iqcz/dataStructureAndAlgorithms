@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class LRUCache {
     int capacity;

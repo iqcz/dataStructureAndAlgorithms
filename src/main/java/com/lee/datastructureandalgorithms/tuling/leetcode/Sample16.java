@@ -6,7 +6,7 @@ package com.lee.datastructureandalgorithms.tuling.leetcode;
  * <p>
  * 滑动窗口来实现
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample16 {
     public static void main(String[] args) {

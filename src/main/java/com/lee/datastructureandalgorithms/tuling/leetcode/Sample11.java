@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 两数之和2
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample11 {
     public static void main(String[] args) {

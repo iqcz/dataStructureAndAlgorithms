@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class StringLengthSort {
     public static void main(String[] args) {

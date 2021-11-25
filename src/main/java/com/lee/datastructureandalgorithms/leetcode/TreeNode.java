@@ -4,7 +4,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 /**
  * Definition for a binary tree node.
  *
- * @author osyuj
+ * @author D49450
  */
 public class TreeNode {
     public int val;

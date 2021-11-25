@@ -1,7 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Solution28 {
     public int removeDuplicates(int[] nums) {

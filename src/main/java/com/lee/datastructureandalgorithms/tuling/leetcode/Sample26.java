@@ -9,7 +9,7 @@ import java.util.List;
  * 二叉树遍历，层次遍历
  * 使用递归方式
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample26 {
     public static void main(String[] args) {

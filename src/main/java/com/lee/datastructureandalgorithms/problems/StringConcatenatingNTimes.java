@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 /**
  * Concatenating the same string n times
- * @author osyuj
+ * @author D49450
  */
 public class StringConcatenatingNTimes {
 

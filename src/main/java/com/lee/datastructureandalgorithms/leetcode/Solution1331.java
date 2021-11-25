@@ -3,7 +3,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 import java.util.Arrays;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Solution1331 {
     public int[] arrayRankTransform(int[] arr) {

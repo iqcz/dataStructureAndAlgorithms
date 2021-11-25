@@ -10,7 +10,7 @@ import java.util.Map;
  * 假设每个输入只对应唯一的答案，而且不可以重复使用相同的元素。
  * 返回两数的下标值，以数组形式返回
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample10 {
     public static void main(String[] args) {

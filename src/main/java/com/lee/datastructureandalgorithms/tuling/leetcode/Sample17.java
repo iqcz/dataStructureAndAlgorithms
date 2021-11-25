@@ -18,7 +18,7 @@ import java.util.Queue;
  * /
  * 7
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample17 {
     public static void main(String[] args) {

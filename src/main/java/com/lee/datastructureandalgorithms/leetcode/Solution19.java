@@ -1,7 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Solution19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {

@@ -4,7 +4,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  * 奇偶链表
  *
  * 头尾指针
- * @author osyuj
+ * @author D49450
  */
 public class Solution328 {
     public ListNode oddEvenList(ListNode head) {

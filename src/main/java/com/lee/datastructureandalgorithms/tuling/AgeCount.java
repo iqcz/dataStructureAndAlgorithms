@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * 一个文件里面包含全国人民（14亿）的年龄数据（0~180），现在要你统计每一个年龄有多少人？
  *
- * @author osyuj
+ * @author D49450
  */
 public class AgeCount {
 

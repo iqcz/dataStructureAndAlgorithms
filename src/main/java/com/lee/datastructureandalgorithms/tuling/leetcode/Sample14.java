@@ -6,7 +6,7 @@ import com.lee.datastructureandalgorithms.leetcode.ListNode;
 import java.util.Set;
 
 /**
- * @author osyuj
+ * @author D49450
  */
 public class Sample14 {
     public static void main(String[] args) {

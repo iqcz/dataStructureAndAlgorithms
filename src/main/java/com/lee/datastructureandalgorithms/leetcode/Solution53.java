@@ -11,7 +11,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 
  如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
 
- * @author osyuj
+ * @author D49450
  */
 public class Solution53 {
     public static int maxSubArray(int[] nums) {

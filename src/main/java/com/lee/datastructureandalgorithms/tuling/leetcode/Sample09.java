@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 一个整型数组 nums ，在数组中找出由三个数字组成的最大乘积，并输出这个乘积。
  *
- * @author osyuj
+ * @author D49450
  */
 public class Sample09 {
     public static void main(String[] args) {

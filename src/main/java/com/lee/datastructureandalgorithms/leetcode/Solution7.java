@@ -2,7 +2,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 /**
  * 反转数字
- * @author osyuj
+ * @author D49450
  */
 public class Solution7 {
     public static void main(String[] args) {
