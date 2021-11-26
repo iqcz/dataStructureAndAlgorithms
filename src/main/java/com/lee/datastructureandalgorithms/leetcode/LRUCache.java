@@ -31,6 +31,7 @@ public class LRUCache {
             map.put(key, value);
             return;
         }
+        
         map.put(key, value);
         // 超出capacity，删除最久没用的,利用迭代器删除第一个
         if (map.size() > capacity) {
