@@ -22,6 +22,29 @@ public class Question0332 {
         return  head;
     }
 
+
+    public static ListNode reversePairIterative(ListNode head) {
+        ListNode tmp1 = null;
+        ListNode tmp2 = null;
+
+        while (head != null && head.getNext() != null) {
+            if (tmp1 != null) {
+                tmp1.getNext().setNext(head.getNext());
+            }
+            tmp1 = head.getNext();
+            head.setNext(head.getNext().getNext());
+            tmp1.setNext(head);
+
+            if (tmp2 == null) {
+                tmp2 = tmp1;
+            }
+
+            // 指针后移
+            head = head.getNext();
+        }
+        return tmp2;
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(1);
         ListNode node1 = new ListNode(2);
@@ -38,8 +61,10 @@ public class Question0332 {
 
         System.out.println("head = " + head);
 
+
+//        ListNode reversedHead = reversePairRecursive(head);
         ListNode reversedHead = reversePairRecursive(head);
+
         System.out.println("reversedHead = " + reversedHead);
     }
-
 }
