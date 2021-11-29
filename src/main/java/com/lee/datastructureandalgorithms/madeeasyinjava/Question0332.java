@@ -22,6 +22,7 @@ public class Question0332 {
         return  head;
     }
 
+
     public static ListNode reversePairIterative(ListNode head) {
         ListNode tmp1 = null;
         ListNode tmp2 = null;
@@ -60,9 +61,10 @@ public class Question0332 {
 
         System.out.println("head = " + head);
 
+
 //        ListNode reversedHead = reversePairRecursive(head);
-        ListNode reversedHead = reversePairIterative(head);
+        ListNode reversedHead = reversePairRecursive(head);
+
         System.out.println("reversedHead = " + reversedHead);
     }
-
 }
