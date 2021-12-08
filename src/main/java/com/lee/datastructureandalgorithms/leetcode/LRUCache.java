@@ -15,7 +15,7 @@ public class LRUCache {
         map = new LinkedHashMap<>();
     }
 
-    public int get(int key) {
+    public Integer get(int key) {
         if (!map.containsKey(key)) {
             return -1;
         }
