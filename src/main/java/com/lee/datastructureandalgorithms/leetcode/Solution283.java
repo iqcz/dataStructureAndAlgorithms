@@ -14,6 +14,7 @@ public class Solution283 {
         int j = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 0) {
+                // 交换的方式
                 swap(nums, i, j);
                 j++;
             }

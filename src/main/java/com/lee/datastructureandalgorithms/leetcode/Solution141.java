@@ -44,4 +44,20 @@ public class Solution141 {
         }
         return true;
     }
+
+    public boolean hasCycle2(ListNode head) {
+        if (head == null) {
+            return false;
+        }
+        ListNode slowPointer = head;
+        ListNode fastPointer = head;
+        while (fastPointer.getNext() != null && fastPointer.getNext().getNext() != null) {
+            slowPointer = slowPointer.getNext();
+            fastPointer = fastPointer.getNext().getNext();
+            if (slowPointer == fastPointer) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
