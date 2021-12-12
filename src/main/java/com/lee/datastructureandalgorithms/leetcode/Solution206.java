@@ -12,6 +12,7 @@ public class Solution206 {
         while (current != null) {
             next = current.getNext();
             current.setNext(previous);
+            // 向前移动
             previous = current;
             current = next;
         }

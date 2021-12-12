@@ -31,6 +31,8 @@ public class Solution234 {
 
     /**
      * 使用快慢指针，找到中点；
+     * 后半部分反转进行比较；
+     * 考虑，奇数个
      * @param head
      * @return
      */
