@@ -2,6 +2,9 @@ package com.lee.datastructureandalgorithms.offer;
 
 import java.util.Arrays;
 
+/**
+ * @author D49450
+ */
 public class Question3 {
 
     public static int[] countBits(int num) {
