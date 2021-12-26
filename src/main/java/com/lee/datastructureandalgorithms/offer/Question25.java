@@ -16,6 +16,7 @@ public class Question25 {
     private ListNode addReversed(ListNode head1, ListNode head2) {
         ListNode sentinel = new ListNode(0);
         ListNode sumNode = sentinel;
+        // 进位
         int carry = 0;
 
         while (head1 != null || head2 != null) {
