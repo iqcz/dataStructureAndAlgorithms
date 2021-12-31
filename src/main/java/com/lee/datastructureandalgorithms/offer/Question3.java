@@ -14,6 +14,7 @@ public class Question3 {
             int j = i;
             while (j != 0) {
                 result[i]++;
+                // 计算i的二进制形式中1的个数
                 j = j & (j - 1);
             }
         }
