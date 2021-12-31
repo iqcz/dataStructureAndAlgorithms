@@ -9,7 +9,7 @@ public class Question2 {
         StringBuilder result = new StringBuilder();
         int i = a.length() - 1;
         int j = b.length() - 1;
-
+        // 进位
         int carry = 0;
 
         while (i >= 0 || j >= 0) {
