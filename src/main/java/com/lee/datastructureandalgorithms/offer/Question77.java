@@ -1,7 +1,5 @@
 package com.lee.datastructureandalgorithms.offer;
 
-import static com.lee.datastructureandalgorithms.sort.QuickSort.partition;
-
 /**
  * @author D49450
  */
