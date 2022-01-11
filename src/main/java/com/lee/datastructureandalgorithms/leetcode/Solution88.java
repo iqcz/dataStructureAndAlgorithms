@@ -30,14 +30,14 @@ public class Solution88 {
         System.arraycopy(nums2, 0, nums1, 0, p2 + 1);
     }
 
-    public void merge1(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge1(int[] nums1, int m, int[] nums2, int n) {
         int k = m + n;
-        for (int index = k -1,nums1Index = m -1, nums2Index = n - 1; index >=0; index--) {
+        for (int index = k - 1, nums1Index = m - 1, nums2Index = n - 1; index >= 0; index--) {
             if (nums1Index < 0) {
                 nums1[index] = nums2[nums2Index--];
             } else if (nums2Index < 0) {
                 break;
-            } else if(nums1[nums1Index] > nums2[nums2Index]) {
+            } else if (nums1[nums1Index] > nums2[nums2Index]) {
                 nums1[index] = nums1[nums1Index--];
             } else {
                 nums1[index] = nums2[nums2Index--];
@@ -45,13 +45,46 @@ public class Solution88 {
         }
     }
 
+    /**
+     * 使用临时数组
+     *
+     * @param nums1 数组1
+     * @param m     数组1元素个数
+     * @param nums2 数组2
+     * @param n     数组2元素个数
+     */
+    public static void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int k = m + n;
+        int[] temp = new int[k];
+        for (int index = 0, nums1Index = 0, nums2Index = 0; index < k; index++) {
+            if (nums1Index >= m) {
+                temp[index] = nums2[nums2Index++];
+            } else if (nums2Index >= n) {
+                temp[index] = nums1[nums1Index++];
+            } else if (nums1[nums1Index] < nums2[nums2Index]) {
+                temp[index] = nums1[nums1Index++];
+            } else {
+                temp[index] = nums2[nums2Index++];
+            }
+        }
+        for (int i = 0; i < temp.length; i++) {
+            nums1[i] = temp[i];
+        }
+    }
+
     public static void main(String[] args) {
         // m = 3
-        int[] nums1 = {1, 2, 3, 0, 0, 0, 0, 0};
+        int[] nums1 = {1, 2, 3, 0, 0, 0, 0};
         // n = 4
         int[] nums2 = {2, 5, 6, 6};
 
-        merge(nums1, 3, nums2, 4);
+//        merge(nums1, 3, nums2, 4);
+//        System.out.println(Arrays.toString(nums1));
+
+//        merge1(nums1, 3, nums2, 4);
+//        System.out.println(Arrays.toString(nums1));
+
+        merge2(nums1, 3, nums2, 4);
         System.out.println(Arrays.toString(nums1));
     }
 }
