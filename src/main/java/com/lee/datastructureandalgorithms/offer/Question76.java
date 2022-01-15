@@ -21,5 +21,4 @@ public class Question76 {
         }
         return nums[index];
     }
-
 }
