@@ -2,6 +2,11 @@ package com.lee.datastructureandalgorithms.offer;
 
 import java.util.Arrays;
 
+/**
+ * 排序数组中的两个数字之和
+ * 双指针
+ * @author d49450
+ */
 public class Question6 {
 
     public static void main(String[] args) {
