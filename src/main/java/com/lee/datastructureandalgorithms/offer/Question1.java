@@ -11,6 +11,7 @@ public class Question1 {
             return Integer.MAX_VALUE;
         }
 
+        // 防止溢出，先把被除数和除数转换成负数
         int negative = 2;
         if (dividend > 0) {
             negative--;

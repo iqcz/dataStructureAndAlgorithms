@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * @author D49450
  * 删除排序链表中的重复元素
  */
 class Solution83 {
