@@ -32,7 +32,7 @@ public class Question1 {
         while (dividend <= divisor) {
             int value = divisor;
             int quotient = 1;
-            while (value >= 0x00000000 && dividend <= value + value) {
+            while (value >= 0xC0000000 && dividend <= value + value) {
                 quotient += quotient;
                 value += value;
             }
