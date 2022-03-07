@@ -2,6 +2,8 @@ package com.lee.datastructureandalgorithms.offer;
 
 /**
  * @author Phideon
+ * 将两个数字的右端对齐，然后从它们的个位开始从右向左相加同一位置的两个数位；
+ * 如果前一位有进位还要加上进位；
  */
 public class Question2 {
 
