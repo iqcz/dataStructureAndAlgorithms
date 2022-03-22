@@ -47,12 +47,13 @@ public class MyDDLNode {
         } else {
             DDLNode previousNode = headNode;
             for (int i = 1; i < position - 1; i++) {
+                // 要插入元素的前一个位置
                 previousNode = previousNode.getNext();
             }
-
+            // 当前位置
             DDLNode currentNode = previousNode.getNext();
             nodeToInsert.setNext(currentNode);
-            // 注意这个判断
+            // 注意这个判断，可能走到链表结尾
             if (currentNode != null) {
                 currentNode.setPrevious(nodeToInsert);
             }
