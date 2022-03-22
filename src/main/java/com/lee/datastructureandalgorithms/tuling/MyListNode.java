@@ -107,9 +107,11 @@ public class MyListNode {
 
         current = head;
         while (current != null) {
+            //遍历
             next = current.getNext();
             current.setNext(previous);
             previous = current;
+            // 指针后移
             current = next;
         }
         return previous;

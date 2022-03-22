@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.offer;
 
 /**
+ * 只出现一次的数字，其他数字出现了三次，找出那个出现一次的数字。
  * @author D49450
  */
 public class Question4 {
