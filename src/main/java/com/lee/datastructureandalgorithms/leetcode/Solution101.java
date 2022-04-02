@@ -10,7 +10,6 @@ public class Solution101 {
             return true;
         }
         return deepCheck(root.left, root.right);
-
     }
 
     private boolean deepCheck(TreeNode left, TreeNode right) {
