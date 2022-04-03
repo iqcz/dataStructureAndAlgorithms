@@ -6,6 +6,6 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution501 {
     public int[] findMode(TreeNode root) {
-
+        return null;
     }
 }
