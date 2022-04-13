@@ -8,7 +8,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 public class Solution26 {
 
     public int removeDuplicates(int[] nums) {
-        if (nums == null) {
+        if (nums == null || nums.length == 0) {
             return -1;
         }
         int k = 0;
