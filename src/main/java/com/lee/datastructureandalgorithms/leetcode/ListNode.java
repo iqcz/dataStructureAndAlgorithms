@@ -4,7 +4,7 @@ public class ListNode {
 
     private int data;
 
-    private ListNode next;
+    public ListNode next;
 
     public ListNode() {
     }
