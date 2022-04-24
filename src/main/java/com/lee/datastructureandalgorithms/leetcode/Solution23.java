@@ -50,6 +50,56 @@ public class Solution23 {
             return o1.getData() - o2.getData();
         }
     }
-}
 
 
+    /**
+     * 使用分治 + 递归 + 两个链表排序方法，实现多个链表合并。
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists1(ListNode[] lists) {
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    public ListNode merge(ListNode[] lists, int left, int right) {
+        if (left == right) {
+            return lists[left];
+        }
+        if (left > right) {
+            return null;
+        }
+
+        int mid = (left + right) >> 1;
+        return mergeTwoLists(merge(lists, left, mid), merge(lists, mid + 1, right));
+    }
+
+    public ListNode mergeTwoLists(ListNode listNode1, ListNode listNode2) {
+        if (listNode1 == null) {
+            return listNode2;
+        }
+        if (listNode2 == null) {
+            return listNode1;
+        }
+
+        ListNode resultNode = new ListNode(0);
+        ListNode p = resultNode;
+        while (listNode1 != null && listNode2 != null) {
+            if (listNode1.getData() < listNode2.getData()) {
+                p.setNext(listNode1);
+                listNode1 = listNode1.getNext();
+            } else {
+                p.setNext(listNode2);
+                listNode2 = listNode2.getNext();
+            }
+            p = p.getNext();
+            if (listNode1 != null) {
+                p.setNext(listNode1);
+                if (listNode2 != null) {
+                    p.setNext(listNode2);
+                }
+                return resultNode.getNext();
+            }
+
+
+        }
+    }
