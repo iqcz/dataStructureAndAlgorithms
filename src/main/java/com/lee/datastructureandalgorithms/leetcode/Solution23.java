@@ -54,6 +54,7 @@ public class Solution23 {
 
     /**
      * 使用分治 + 递归 + 两个链表排序方法，实现多个链表合并。
+     *
      * @param lists
      * @return
      */
@@ -92,14 +93,14 @@ public class Solution23 {
                 listNode2 = listNode2.getNext();
             }
             p = p.getNext();
-            if (listNode1 != null) {
-                p.setNext(listNode1);
-                if (listNode2 != null) {
-                    p.setNext(listNode2);
-                }
-                return resultNode.getNext();
-            }
-
-
         }
+        if (listNode1 != null) {
+            p.setNext(listNode1);
+        }
+        if (listNode2 != null) {
+            p.setNext(listNode2);
+        }
+        return resultNode.getNext();
+
     }
+}
