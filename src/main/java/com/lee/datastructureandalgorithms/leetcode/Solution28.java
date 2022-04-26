@@ -22,4 +22,8 @@ public class Solution28 {
         }
         return left + 1;
     }
+
+    public int strStr(String haystack, String needle) {
+        return -1;
+    }
 }
