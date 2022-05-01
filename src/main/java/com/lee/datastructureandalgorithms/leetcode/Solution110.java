@@ -7,7 +7,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  *
  * @author D49450
  */
-public class Solutioin110 {
+public class Solution110 {
     public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
