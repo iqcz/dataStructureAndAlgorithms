@@ -10,6 +10,8 @@ public class BinarySearch {
         System.out.println("binarySearch(nums, 7) = " + binarySearch(nums, 7));
         System.out.println("binarySearch1(nums, 5) = " + binarySearch1(nums, 6));
         System.out.println("binarySearch2(nums, 2) = " + binarySearch2(nums, 2));
+
+        System.out.println("bSearch(nums, nums.length, 7) = " + bSearch(nums, nums.length, 7));
     }
 
     public static int binarySearch(int[] nums, int target) {
@@ -77,6 +79,32 @@ public class BinarySearch {
             return nums[high];
         } else {
             return nums[left];
+        }
+    }
+
+    public static int bSearch(int[] nums, int length, int values) {
+        return bSearchInternally(nums, 0, length - 1, values);
+    }
+
+    /**
+     * 递归
+     * @param nums 待查询的数组
+     * @param low 下限
+     * @param high 上限
+     * @param value 待查找的数字
+     * @return
+     */
+    private static int bSearchInternally(int[] nums, int low, int high, int value) {
+        if (low > high) {
+            return -1;
+        }
+        int mid = low + ((high - low) >> 1);
+        if (nums[mid] == value) {
+            return mid;
+        } else if (nums[mid] < value) {
+            return bSearchInternally(nums, mid + 1, high, value);
+        } else {
+            return bSearchInternally(nums, 0, mid - 1, value);
         }
     }
 }
