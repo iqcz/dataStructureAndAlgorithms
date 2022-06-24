@@ -16,7 +16,7 @@ public class Solution876 {
             slow = slow.getNext();
             fast = fast.getNext().getNext();
         }
-
+        // 注意，返回slow
         return slow;
     }
 }
