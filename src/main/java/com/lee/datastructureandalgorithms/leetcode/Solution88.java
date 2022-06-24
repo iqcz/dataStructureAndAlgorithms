@@ -30,6 +30,13 @@ public class Solution88 {
         System.arraycopy(nums2, 0, nums1, 0, p2 + 1);
     }
 
+    /**
+     * 双指针逆序处理，指向两个数组的最后位置；
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     */
     public static void merge1(int[] nums1, int m, int[] nums2, int n) {
         int k = m + n;
         for (int index = k - 1, nums1Index = m - 1, nums2Index = n - 1; index >= 0; index--) {
