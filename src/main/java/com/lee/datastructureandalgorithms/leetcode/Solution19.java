@@ -29,6 +29,8 @@ public class Solution19 {
 
     /**
      * 使用快慢指针
+     * 哨兵节点，解决 null 等情况
+     *
      * @param head
      * @param n
      * @return
@@ -39,11 +41,11 @@ public class Solution19 {
         ListNode slow = sentinel;
         sentinel.next = head;
 
-        for(int i = 1; i <= n+1;i++) {
+        for (int i = 1; i <= n + 1; i++) {
             fast = fast.next;
         }
 
-        while(fast != null) {
+        while (fast != null) {
             slow = slow.next;
             fast = fast.next;
         }

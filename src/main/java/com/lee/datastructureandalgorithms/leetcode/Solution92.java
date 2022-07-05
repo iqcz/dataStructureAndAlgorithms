@@ -24,8 +24,6 @@ public class Solution92 {
             preNode.next = nextNode;
             nextNode = startNode.next;
         }
-
         return dummy.next;
     }
-
 }
