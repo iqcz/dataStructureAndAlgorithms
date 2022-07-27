@@ -40,6 +40,7 @@ public class Solution21 {
             previous = previous.getNext();
         }
 
+        // 注意此步骤
         previous.setNext(l1 == null ? l2 : l1);
 
         return preHead.getNext();
