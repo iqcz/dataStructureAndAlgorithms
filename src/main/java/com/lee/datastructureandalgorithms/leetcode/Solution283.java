@@ -7,6 +7,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution283 {
     public void moveZeroes(int[] nums) {
+        // 边界校验
         if (nums == null || nums.length == 0) {
             return;
         }
