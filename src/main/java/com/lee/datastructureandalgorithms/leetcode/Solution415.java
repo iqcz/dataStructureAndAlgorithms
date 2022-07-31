@@ -7,7 +7,7 @@ public class Solution415 {
         // 进位
         int carry = 0;
         int i = num1.length() - 1;
-        int j= num2.length() - 1;
+        int j = num2.length() - 1;
         for (; i >= 0 || j >= 0 || carry == 1; i--, j--) {
 
             int x = i < 0 ? 0 : num1.charAt(i) - '0';
