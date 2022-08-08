@@ -6,9 +6,7 @@ package com.lee.datastructureandalgorithms.leetcode;
 public class Solution114 {
     public void flatten(TreeNode root) {
         while (root != null) {
-            if (root.left == null) {
-                root = root.right;
-            } else {
+            if (root.left != null) {
                 // 寻找左子树最右节点
                 TreeNode mostRightNode = root.left;
                 while (mostRightNode.right != null) {
@@ -20,8 +18,8 @@ public class Solution114 {
                 root.right = root.left;
                 root.left = null;
                 // 此时root的左子树已经为null，继续向下寻找，是否还有存在的左子树，重复上述过程
-                root = root.right;
             }
+            root = root.right;
         }
     }
 }
