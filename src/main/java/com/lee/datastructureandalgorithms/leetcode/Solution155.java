@@ -17,7 +17,6 @@ public class Solution155 {
             this.stackMin.push(x);
         } else if (x <= getMin()) {
             this.stackMin.push(x);
-
         }
         this.stackData.push(x);
     }

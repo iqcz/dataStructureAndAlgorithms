@@ -21,6 +21,5 @@ public class Solution165 {
     public static void main(String[] args) {
         Solution165 solution165 = new Solution165();
         System.out.println("solution165.compareVersion(\"1.01.3\", \"1.001\") = " + solution165.compareVersion("1.01.3", "1.001"));
-
     }
 }
