@@ -35,7 +35,6 @@ public class Solution5 {
         return s.substring(i + 1, j);
     }
 
-
     // 也可以使用动态规划法
 
     public static void main(String[] args) {
