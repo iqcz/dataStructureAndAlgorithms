@@ -6,3 +6,6 @@ http://redis.cn/
 
 ### 打字网站
 https://www.keybr.com/
+
+### 变量命名
+https://unbug.github.io/codelf/
