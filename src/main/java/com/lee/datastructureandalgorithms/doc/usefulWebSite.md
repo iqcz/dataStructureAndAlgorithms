@@ -1,6 +1,9 @@
 ### 在线Cron表达式生成器
 https://cron.qqe2.com/
 
+### json 格式化
+https://www.bejson.com/
+
 ### json to grid
 https://jsongrid.com/json-grid
 
@@ -15,3 +18,6 @@ https://calc.itzmx.com/
 
 ### DDD
 https://herbertograca.com/
+
+### 变量命名
+https://unbug.github.io/codelf/
