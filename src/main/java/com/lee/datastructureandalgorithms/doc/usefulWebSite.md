@@ -12,6 +12,7 @@ http://redis.cn/
 
 ### 打字网站
 https://www.keybr.com/
+https://www.speedcoder.net/lessons/java/2/
 
 ### PC字节计算器
 https://calc.itzmx.com/
