@@ -10,6 +10,7 @@ public class Chaper5_01 {
 
     /**
      * by myself
+     *
      * @param str1
      * @param str2
      * @return
@@ -22,10 +23,10 @@ public class Chaper5_01 {
             return false;
         }
 
-        char [] char1 = str1.toCharArray();
-        char [] char2 = str2.toCharArray();
+        char[] char1 = str1.toCharArray();
+        char[] char2 = str2.toCharArray();
 
-        int [] map = new int[256];
+        int[] map = new int[256];
         for (char value : char1) {
             map[value]++;
         }
@@ -34,7 +35,7 @@ public class Chaper5_01 {
             map[c]--;
         }
 
-        for( int d : map) {
+        for (int d : map) {
             if (d < 0) {
                 return false;
             }
@@ -50,10 +51,10 @@ public class Chaper5_01 {
             return false;
         }
 
-        char [] char1 = str1.toCharArray();
-        char [] char2 = str2.toCharArray();
+        char[] char1 = str1.toCharArray();
+        char[] char2 = str2.toCharArray();
 
-        int [] map = new int[256];
+        int[] map = new int[256];
         for (char value : char1) {
             map[value]++;
         }
