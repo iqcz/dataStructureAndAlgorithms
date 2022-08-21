@@ -5,14 +5,16 @@ import java.util.Collections;
 
 /**
  * 翻转字符串里的单词
+ *
  * @author D49450
  */
 public class Solution151 {
 
     /**
      * 使用JDK自带API
-     * @param s
-     * @return
+     *
+     * @param s 待翻转的字符串
+     * @return 翻转以后的字符串
      */
     public static String reverseWordsInJDK(String s) {
         String[] words = s.trim().split(" +");
