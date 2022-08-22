@@ -12,6 +12,12 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution21 {
 
+    /**
+     * 递归
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
@@ -26,6 +32,12 @@ public class Solution21 {
         }
     }
 
+    /**
+     * 引入哨兵
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
         ListNode preHead = new ListNode(-1);
         ListNode previous = preHead;
