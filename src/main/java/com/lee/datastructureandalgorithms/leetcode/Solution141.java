@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * 环形链表
  * @author D49450
  */
 public class Solution141 {
