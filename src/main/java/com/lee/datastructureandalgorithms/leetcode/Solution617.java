@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * 合并二叉树
  * @author i324779
  */
 public class Solution617 {
