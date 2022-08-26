@@ -27,6 +27,5 @@ public class Solution101 {
         }
         return deepCheck(left.left, right.right) && deepCheck(left.right, right.left);
     }
-
     // 还可以借助队列来实现
 }
