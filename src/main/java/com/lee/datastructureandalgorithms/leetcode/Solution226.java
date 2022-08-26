@@ -9,12 +9,15 @@ public class Solution226 {
         if (root == null) {
             return null;
         }
-
         invertTree(root.left);
         invertTree(root.right);
+        swap(root);
+        return root;
+    }
+
+    private static void swap(TreeNode root) {
         TreeNode tmp = root.left;
         root.left = root.right;
         root.right = tmp;
-        return root;
     }
 }
