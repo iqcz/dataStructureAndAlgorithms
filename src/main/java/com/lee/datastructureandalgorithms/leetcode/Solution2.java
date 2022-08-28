@@ -20,11 +20,12 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(0);
+        ListNode sentinel = new ListNode(0);
         ListNode p1 = l1;
         ListNode p2 = l2;
-        ListNode curr = head;
+        ListNode curr = sentinel;
 
+        // 进位
         int carry = 0;
         while (p1 != null || p2 != null) {
             int x = p1 != null ? p1.getData() : 0;
@@ -43,6 +44,6 @@ public class Solution2 {
         if (carry >= 0) {
             curr.setNext(new ListNode(carry));
         }
-        return head.getNext();
+        return sentinel.getNext();
     }
 }

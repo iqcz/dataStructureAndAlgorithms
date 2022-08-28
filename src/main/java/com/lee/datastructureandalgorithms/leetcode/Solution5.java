@@ -40,7 +40,6 @@ public class Solution5 {
     public static void main(String[] args) {
         String str = "aabbcc";
         System.out.println("longestPalindrome(str) = " + longestPalindrome(str));
-
     }
 }
 
