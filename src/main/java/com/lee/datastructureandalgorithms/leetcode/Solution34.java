@@ -13,6 +13,7 @@ class Solution34 {
 
     private int findFirst(int[] nums, int target) {
         int idx = -1;
+
         int start = 0;
         int end = nums.length - 1;
         while (start <= end) {

@@ -10,7 +10,11 @@ public class Solution11 {
         int j = height.length - 1;
         int maxWater = 0;
         while (i < j) {
-            maxWater = height[i] < height[j] ? Math.max(maxWater, (j - i) * height[i++]) : Math.max(maxWater, (j - i) * height[j--]);
+            maxWater = height[i] < height[j]
+                    ?
+                    Math.max(maxWater, (j - i) * height[i++])
+                    :
+                    Math.max(maxWater, (j - i) * height[j--]);
         }
         return maxWater;
     }
