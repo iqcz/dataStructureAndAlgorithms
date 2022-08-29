@@ -21,7 +21,7 @@ public class Solution9 {
         int copy = x;
         while (x > 0) {
             res = res * 10 + (x % 10);
-            x = x / 10;
+            x /= 10;
         }
         return copy == res;
     }

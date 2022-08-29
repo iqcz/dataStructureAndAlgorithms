@@ -5,7 +5,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  *
  * @author D49450
  */
-public class Solution10 {
+public class Solution12 {
     String[] thousands = {"", "M", "MM", "MMM"};
     String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
     String[] tens = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};

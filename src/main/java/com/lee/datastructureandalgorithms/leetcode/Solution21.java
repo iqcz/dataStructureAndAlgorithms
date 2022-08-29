@@ -39,22 +39,22 @@ public class Solution21 {
      * @return
      */
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        ListNode preHead = new ListNode(-1);
-        ListNode previous = preHead;
+        ListNode sentinel = new ListNode(-1);
+        ListNode mergedList = sentinel;
         while (l1 != null && l2 != null) {
             if (l1.getData() <= l2.getData()) {
-                previous.setNext(l1);
+                mergedList.setNext(l1);
                 l1 = l1.getNext();
             } else {
-                previous.setNext(l2);
+                mergedList.setNext(l2);
                 l2 = l2.getNext();
             }
-            previous = previous.getNext();
+            mergedList = mergedList.getNext();
         }
 
         // 注意此步骤
-        previous.setNext(l1 == null ? l2 : l1);
+        mergedList.setNext(l1 == null ? l2 : l1);
 
-        return preHead.getNext();
+        return sentinel.getNext();
     }
 }

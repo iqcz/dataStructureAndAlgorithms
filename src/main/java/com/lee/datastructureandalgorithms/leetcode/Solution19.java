@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * 删除链表的倒数第 N 个结点
  * @author D49450
  */
 public class Solution19 {
