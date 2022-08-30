@@ -27,7 +27,6 @@ public class Solution448 {
     /**
      * 也可以使用 hashmap ，但需要额外分配空间
      */
-
     public static void main(String[] args) {
         int [] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         Solution448 solution448 = new Solution448();

@@ -1,7 +1,11 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+/**
+ * 二叉树的直径
+ * @author i324779
+ */
 public class Solution543 {
-    int max;
+    private int max;
 
     public int diameterOfBinaryTree(TreeNode root) {
         maxDepth(root);
