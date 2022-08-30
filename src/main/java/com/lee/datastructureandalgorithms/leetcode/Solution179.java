@@ -2,17 +2,19 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
- *
  * 本题其实是排序题目的变种，是一道披着数字外衣的排序题。
+ *
  * @author D49450
  */
 public class Solution179 {
 
     public static void main(String[] args) {
-        int [] data = {10, 2};
+        int[] data = {10, 2,5};
         System.out.println("largestNumber(data) = " + largestNumber(data));
+        System.out.println("largestNumber1(data) = " + largestNumber1(data));
     }
 
     public static String largestNumber(int[] nums) {
@@ -46,4 +48,18 @@ public class Solution179 {
         }
     }
 
+    public static String largestNumber1(int[] nums) {
+        PriorityQueue<String> heap = new PriorityQueue<>((x, y) -> (y + x).compareTo(x + y));
+        for (int x : nums) {
+            heap.offer(String.valueOf(x));
+        }
+        StringBuilder res = new StringBuilder();
+        while (!heap.isEmpty()) {
+            res.append(heap.poll());
+        }
+        if (res.charAt(0) == '0') {
+            return "0";
+        }
+        return res.toString();
+    }
 }
