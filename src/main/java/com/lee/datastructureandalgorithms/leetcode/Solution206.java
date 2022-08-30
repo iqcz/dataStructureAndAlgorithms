@@ -19,4 +19,3 @@ public class Solution206 {
         return previous;
     }
 }
-
