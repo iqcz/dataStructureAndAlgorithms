@@ -44,7 +44,8 @@ public class Solution3 {
 
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
-        int j = 0;
+        // 滑动窗口左下标
+        int leftIndex = 0;
         int maxLength = 0;
 
         char[] charArr = s.toCharArray();
@@ -53,9 +54,9 @@ public class Solution3 {
                 set.add(c);
                 maxLength = Math.max(maxLength, set.size());
             } else {
-                while (set.contains(charArr[j])) {
-                    set.remove(charArr[j]);
-                    j++;
+                while (set.contains(charArr[leftIndex])) {
+                    set.remove(charArr[leftIndex]);
+                    leftIndex++;
                 }
                 set.add(c);
             }
@@ -66,6 +67,7 @@ public class Solution3 {
 
     /**
      * 滑动窗口
+     *
      * @param s
      * @return
      */
