@@ -1,6 +1,6 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
-/**
+/** 移除元素
  * @author D49450
  */
 public class Solution27 {
