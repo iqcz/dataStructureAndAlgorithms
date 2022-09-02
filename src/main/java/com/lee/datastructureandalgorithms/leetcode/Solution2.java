@@ -13,10 +13,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  * 输出：7 -> 0 -> 8
  * 原因：342 + 465 = 807
  * 通过次数363,114提交次数983,252
- *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/add-two-numbers
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ * 善用哨兵结点
  */
 public class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

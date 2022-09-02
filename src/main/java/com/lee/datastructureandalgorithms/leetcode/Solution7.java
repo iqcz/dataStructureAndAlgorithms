@@ -12,6 +12,8 @@ public class Solution7 {
 
     public static int reverse(int x) {
         int result = 0;
+
+        // 注意这个判断条件
         while (x != 0) {
             int digit = x % 10;
             x /= 10;
