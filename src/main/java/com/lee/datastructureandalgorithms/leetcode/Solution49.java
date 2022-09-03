@@ -11,8 +11,9 @@ public class Solution49 {
             Arrays.sort(cs);
             String key = String.valueOf(cs);
 
-            if (!map.containsKey(key))
+            if (!map.containsKey(key)) {
                 map.put(key, new ArrayList<>());
+            }
 
             map.get(key).add(str);
         }
