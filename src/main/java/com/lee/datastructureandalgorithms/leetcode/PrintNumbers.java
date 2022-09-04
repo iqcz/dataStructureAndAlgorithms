@@ -5,7 +5,6 @@ package com.lee.datastructureandalgorithms.leetcode;
  *
  */
 public class PrintNumbers {
-
     private static final Object LOCK = new Object();
 
     private static int counter = 1;
