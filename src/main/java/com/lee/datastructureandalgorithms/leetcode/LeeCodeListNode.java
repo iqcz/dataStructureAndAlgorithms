@@ -19,4 +19,3 @@ public class LeeCodeListNode {
         this.next = next;
     }
 }
-

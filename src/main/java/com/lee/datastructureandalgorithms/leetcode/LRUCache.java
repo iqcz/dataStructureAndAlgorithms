@@ -51,6 +51,5 @@ public class LRUCache {
 //        lruCache.put(7, 7);
         lruCache.get(2);
         System.out.println("lruCache.map = " + lruCache.map);
-
     }
 }
