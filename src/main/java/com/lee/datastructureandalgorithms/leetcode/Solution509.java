@@ -18,6 +18,5 @@ public class Solution509 {
     public static void main(String[] args) {
         Solution509 solution509 = new Solution509();
         System.out.println(solution509.fib(9));
-
     }
 }
