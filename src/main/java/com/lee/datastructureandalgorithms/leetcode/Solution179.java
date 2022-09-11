@@ -35,7 +35,7 @@ public class Solution179 {
         boolean flag = false;
         for (int i = 0; i < ans.length(); i++) {
             if (!flag) {
-                flag = !(ans.charAt(i) == '0');
+                flag = ans.charAt(i) != '0';
             }
             if (flag) {
                 realAns.append(ans.charAt(i));
