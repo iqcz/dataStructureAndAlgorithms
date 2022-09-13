@@ -31,7 +31,7 @@ public class Solution128 {
                     cur++;
                 }
             }
-            longest = Math.max((longest), cur - num + 1);
+            longest = Math.max(longest, cur - num + 1);
         }
         return longest;
     }
