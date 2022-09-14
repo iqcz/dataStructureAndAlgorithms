@@ -2,6 +2,8 @@ package com.lee.datastructureandalgorithms.tuling;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 
 /**
@@ -15,7 +17,7 @@ public class AgeCount {
 //        generateAges();
         String str;
         String fileName = "E:\\age1.txt";
-        InputStreamReader isr = new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8);
+        InputStreamReader isr = new InputStreamReader(Files.newInputStream(Paths.get(fileName)), StandardCharsets.UTF_8);
 
         long start = System.currentTimeMillis();
         BufferedReader br = new BufferedReader(isr);
@@ -43,13 +45,13 @@ public class AgeCount {
     private static void generateAges() throws IOException {
         final String fileName = "E:\\age1.txt";
         final Random random = new Random();
-        BufferedWriter objWriter;
-        objWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName)));
-        for (int i = 0; i < 1400000000; i++) {
-            int age = Math.abs(random.nextInt()) % 180;
-            objWriter.write(age + "\r\n");
+        BufferedWriter objWriter = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(fileName))));
+        try (objWriter) {
+            for (int i = 0; i < 1400000000; i++) {
+                int age = Math.abs(random.nextInt()) % 180;
+                objWriter.write(age + "\r\n");
+            }
+            objWriter.flush();
         }
-        objWriter.flush();
-        objWriter.close();
     }
 }
