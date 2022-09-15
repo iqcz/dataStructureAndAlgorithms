@@ -157,9 +157,11 @@ public class Zen02 {
         sums.addAll(collectSums(node.left));
         sums.addAll(collectSums(node.right));
 
-        for (int i = 0; i < sums.size(); i++) {
-            sums.set(i, sums.get(i) + node.val);
-        }
+//        for (int i = 0; i < sums.size(); i++) {
+//            sums.set(i, sums.get(i) + node.val);
+//        }
+        // 上面的for 循环可以用此方法代替
+        sums.replaceAll(integer -> integer + node.val);
 
         if (sums.isEmpty()) {
             sums.add(node.val);
