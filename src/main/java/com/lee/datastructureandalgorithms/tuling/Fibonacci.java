@@ -111,8 +111,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         for (int i = 1; i <= 45; i++) {
             long start = System.currentTimeMillis();
-            System.out.println(i + ":" + tailFab(1, 1, i) + " 所花费的时间为"
-                    + (System.currentTimeMillis() - start) + "ms");
+            System.out.println(i + ":" + tailFab(1, 1, i) + " 所花费的时间为" + (System.currentTimeMillis() - start) + "ms");
         }
         //tailFac(5, 1);
 
@@ -122,19 +121,17 @@ public class Fibonacci {
          * " 所花费的时间为" + (System.currentTimeMillis() - start) + "ms"); }
          */
 
-		/*for (int i = 1; i <= 45; i++) {
-			long start = System.currentTimeMillis();
-			System.out.println(i + ":" + noFab(i) + " 所花费的时间为"
-					+ (System.currentTimeMillis() - start) + "ms");
-		}
-		System.out.println("==================================");
-		System.out.println("加了缓存的情况");
-		for (int i = 1; i <= 45; i++) {
-			data = new int[46];
-			long start = System.currentTimeMillis();
-			System.out.println(i + ":" + fab2(i) + " 所花费的时间为"
-					+ (System.currentTimeMillis() - start) + "ms");
-		}*/
+        for (int i = 1; i <= 45; i++) {
+            long start = System.currentTimeMillis();
+            System.out.println(i + ":" + noFab(i) + " 所花费的时间为" + (System.currentTimeMillis() - start) + "ms");
+        }
+        System.out.println("==================================");
+        System.out.println("加了缓存的情况");
+        for (int i = 1; i <= 45; i++) {
+            data = new int[46];
+            long start = System.currentTimeMillis();
+            System.out.println(i + ":" + fab2(i) + " 所花费的时间为" + (System.currentTimeMillis() - start) + "ms");
+        }
     }
 
 }
