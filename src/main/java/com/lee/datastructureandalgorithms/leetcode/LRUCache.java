@@ -7,8 +7,8 @@ import java.util.Map;
  * @author D49450
  */
 public class LRUCache {
-    int capacity;
-    Map<Integer, Integer> map;
+    private final int capacity;
+    private final Map<Integer, Integer> map;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
