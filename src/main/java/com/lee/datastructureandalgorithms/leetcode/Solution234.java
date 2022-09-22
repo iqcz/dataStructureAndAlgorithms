@@ -9,8 +9,8 @@ public class Solution234 {
     /**
      * 使用栈
      *
-     * @param head
-     * @return
+     * @param head 链表头结点
+     * @return 是否是回文链表
      */
     public boolean isPalindrome(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
