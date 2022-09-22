@@ -46,6 +46,11 @@ public class Solution141 {
         return true;
     }
 
+    /**
+     * 这个好理解
+     * @param head 链表头结点
+     * @return 是否是循环链表
+     */
     public boolean hasCycle2(ListNode head) {
         if (head == null) {
             return false;
