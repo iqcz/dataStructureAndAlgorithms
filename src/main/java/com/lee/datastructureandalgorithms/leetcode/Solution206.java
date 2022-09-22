@@ -5,9 +5,9 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution206 {
     public ListNode reverseList(ListNode head) {
+        ListNode current = head;
         ListNode previous = null;
         ListNode next;
-        ListNode current = head;
 
         while (current != null) {
             next = current.getNext();
