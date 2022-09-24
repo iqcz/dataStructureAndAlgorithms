@@ -1,2 +1,4 @@
-package com.lee.datastructureandalgorithms.leetcode;public class Solution99 {
+package com.lee.datastructureandalgorithms.leetcode;
+
+public class Solution99 {
 }
