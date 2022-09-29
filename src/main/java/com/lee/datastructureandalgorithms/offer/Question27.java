@@ -7,7 +7,7 @@ import com.lee.datastructureandalgorithms.leetcode.TreeNode;
  *
  * @author i324779
  */
-public class Offer27 {
+public class Question27 {
     public TreeNode mirrorTree(TreeNode root) {
         if (root == null) {
             return null;
