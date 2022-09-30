@@ -3,6 +3,7 @@ package com.lee.datastructureandalgorithms.offer;
 import com.lee.datastructureandalgorithms.leetcode.ListNode;
 
 /**
+ * 反转链表
  * @author D49450
  */
 public class Question24 {
