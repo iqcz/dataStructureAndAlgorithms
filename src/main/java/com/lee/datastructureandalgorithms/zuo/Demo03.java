@@ -20,7 +20,6 @@ public class Demo03 {
         // 记录满足要求最左下标位置
         int index = -1;
         while (left <= right) {
-//            int middle = left + (right - left) / 2;
             int middle = left + ((right - left) >> 1);
             if (data[middle] >= num) {
                 index = middle;
