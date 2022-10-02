@@ -3,7 +3,7 @@ package com.lee.datastructureandalgorithms.zen;
 public class Zen01 {
 
     public static void main(String[] args) {
-        int [] data = {1, 2 ,3 ,4, 5};
+        int[] data = {1, 2, 3, 4, 5};
         System.out.println("sum(data) = " + sum(data));
         System.out.println("sumToEnd(data, 0) = " + sumToEnd(data, 0));
     }

@@ -2,6 +2,7 @@ package com.lee.datastructureandalgorithms.zen;
 
 /**
  * 模拟StackOverflowError
+ *
  * @author D49450
  */
 public class CallStackDepth {
@@ -15,6 +16,6 @@ public class CallStackDepth {
             return;
         }
         System.out.println("level = " + level);
-        goDeeper(level +1);
+        goDeeper(level + 1);
     }
 }

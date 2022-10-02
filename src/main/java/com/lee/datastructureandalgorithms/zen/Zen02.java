@@ -58,7 +58,6 @@ public class Zen02 {
     }
 
     /**
-     *
      * 用递推代码实现递推思想
      * 从root到每个叶子节点的路径和
      *
@@ -96,6 +95,7 @@ public class Zen02 {
 
     /**
      * 用递归代码实现递推思想
+     *
      * @param root
      * @return
      */
@@ -145,6 +145,7 @@ public class Zen02 {
 
     /**
      * 用递归代码实现递归思想
+     *
      * @param node
      * @return
      */
@@ -169,8 +170,10 @@ public class Zen02 {
 
         return sums;
     }
+
     /**
      * 用递归代码实现递归思想：改进版
+     *
      * @param node
      * @return
      */
