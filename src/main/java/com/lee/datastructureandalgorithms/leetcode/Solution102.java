@@ -31,7 +31,7 @@ public class Solution102 {
                 if (queue.peek().right != null) {
                     queue.offer(queue.peek().right);
                 }
-                subList.add(queue.poll().val);
+                subList.add(Objects.requireNonNull(queue.poll()).val);
             }
             result.add(subList);
         }
