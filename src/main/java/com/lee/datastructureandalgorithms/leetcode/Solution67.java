@@ -1,6 +1,10 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
-public class solution67 {
+/**
+ * 二进制字符串相加
+ * @author i324779
+ */
+public class Solution67 {
     public String addBinary(String a, String b) {
         StringBuilder ans = new StringBuilder();
         int ca = 0;
