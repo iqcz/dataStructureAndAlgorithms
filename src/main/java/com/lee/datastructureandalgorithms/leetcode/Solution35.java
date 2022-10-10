@@ -1,5 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class Solution35 {
     public int searchInsert(int[] nums, int target) {
         int length = nums.length;
