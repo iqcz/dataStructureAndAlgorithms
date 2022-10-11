@@ -19,7 +19,9 @@ public class Solution107 {
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<>();
-            for (int i = 0; i < queue.size(); i++) {
+            // 此处一定要注意，放在循环外赋值。
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 level.add(node.val);
                 TreeNode left = node.left;
