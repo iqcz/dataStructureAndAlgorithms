@@ -6,7 +6,6 @@ import java.util.Arrays;
  * @author D49450
  */
 public class Solution16 {
-
     public int threeSumClosest(int[] nums, int target) {
         int length = nums.length;
         //if (length < 3) return;
