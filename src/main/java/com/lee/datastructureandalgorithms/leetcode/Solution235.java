@@ -18,4 +18,21 @@ public class Solution235 {
         }
         return ancestor;
     }
+
+    /**
+     * 利用二叉搜索树的特性
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+        if (p.val < root.val && root.val > q.val) {
+            return lowestCommonAncestor(root.left, p, q);
+        }
+        if (p.val > root.val && root.val < q.val) {
+            return lowestCommonAncestor(root.right, p, q);
+        }
+        return root;
+    }
 }
