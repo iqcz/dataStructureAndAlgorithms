@@ -15,6 +15,12 @@ public class Solution239 {
         System.out.println("Arrays.toString(maxSlidingWindow(nums, 3)) = " + Arrays.toString(maxSlidingWindow(nums, 3)));
     }
 
+    /**
+     * 使用队列，双端丢列
+     * @param nums
+     * @param k
+     * @return
+     */
     public static int[] maxSlidingWindow(int[] nums, int k) {
         if (k == 1) {
             return nums;
@@ -42,4 +48,9 @@ public class Solution239 {
 
         return res;
     }
+
+    /**
+     * 大顶堆。
+     * 时间复杂度：nlog n
+     */
 }

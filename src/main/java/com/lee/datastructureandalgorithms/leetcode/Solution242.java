@@ -38,6 +38,7 @@ public class Solution242 {
             return false;
         }
 
+        // 使用map计数
         Map<Character, Integer> sMap = new HashMap<>(16);
         Map<Character, Integer> tMap = new HashMap<>(16);
         for (char c : s.toCharArray()) {
@@ -50,6 +51,7 @@ public class Solution242 {
         if (sMap.size() != tMap.size()) {
             return false;
         }
+        // 最后比较map
         return sMap.equals(tMap);
     }
 }
