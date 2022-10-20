@@ -6,7 +6,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution24 {
     public ListNode swapPairs(ListNode head) {
-        ListNode sentinel = new ListNode(0);
+        ListNode sentinel = new ListNode(-1);
         sentinel.next = head;
         ListNode current = sentinel;
         while (current.next != null && current.next.next != null) {
