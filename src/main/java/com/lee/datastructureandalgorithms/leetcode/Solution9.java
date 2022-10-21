@@ -6,12 +6,14 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution9 {
     public boolean isPalindrome(int x) {
+        // 前置判断，要形成第一反应
         if (x < 0) {
             return false;
         }
         if (x == 0) {
             return true;
         }
+        // 特殊case
         // eg: 10, 100
         if (x % 10 == 0) {
             return false;

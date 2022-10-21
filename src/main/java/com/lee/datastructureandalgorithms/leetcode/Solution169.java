@@ -1,6 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * 每两个，消消乐。
+ * 或者像，在游戏里面，相同级别的棋子直接对棋。
  * @author D49450
  */
 public class Solution169 {

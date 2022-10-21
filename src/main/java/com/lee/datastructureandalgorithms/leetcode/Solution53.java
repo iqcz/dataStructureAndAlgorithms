@@ -42,7 +42,7 @@ public class Solution53 {
     /**
      * 动态规划
      */
-    public int maxSubArrayDp(int[] nums) {
+    public static int maxSubArrayDp(int[] nums) {
         int result = nums[0];
         int pre = result;
         for (int i = 1; i < nums.length; i++) {
@@ -60,5 +60,6 @@ public class Solution53 {
         int[] data = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(data));
         System.out.println(maxSubArray1(data));
+        System.out.println(maxSubArrayDp(data));
     }
 }

@@ -39,8 +39,7 @@ public class Solution70 {
         if (storeMap.get(n) != null) {
             return storeMap.get(n);
         }
-        int result;
-        result = climbStairs1(n - 1) + climbStairs1(n - 2);
+        int result = climbStairs1(n - 1) + climbStairs1(n - 2);
         storeMap.put(n, result);
 
         return result;
