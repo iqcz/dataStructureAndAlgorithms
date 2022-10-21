@@ -47,4 +47,11 @@ class Solution34 {
         }
         return idx;
     }
+
+    static double sum = 0D;
+    public static void main(String[] args) {
+        for (int i = 0; i < 0x77777777; i++) { // counted loop
+            sum += Math.log(i); // Math.log is an intrinsic
+        }
+    }
 }
