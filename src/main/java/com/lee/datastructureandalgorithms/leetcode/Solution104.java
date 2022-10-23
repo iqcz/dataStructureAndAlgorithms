@@ -17,8 +17,8 @@ public class Solution104 {
     /**
      * 最小深度
      *
-     * @param root
-     * @return
+     * @param root 树
+     * @return 树的最小深度
      */
     public int minDepth(TreeNode root) {
         if (root == null) {
