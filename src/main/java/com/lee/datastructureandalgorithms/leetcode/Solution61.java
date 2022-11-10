@@ -31,6 +31,11 @@ public class Solution61 {
         return head;
     }
 
+    /**
+     * 计算链表长度
+     * @param head 链表头结点
+     * @return 链表长度
+     */
     private int calculateLength(ListNode head) {
         int length = 0;
         while (head != null) {
