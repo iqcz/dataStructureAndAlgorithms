@@ -32,9 +32,9 @@ public class Solution19 {
      * 使用快慢指针
      * 哨兵节点，解决 null 等情况
      *
-     * @param head
-     * @param n
-     * @return
+     * @param head 链表头结点
+     * @param n 倒数第n个数
+     * @return 删除后的链表
      */
     public ListNode removeNthFromEnd1(ListNode head, int n) {
         ListNode sentinel = new ListNode(0);
