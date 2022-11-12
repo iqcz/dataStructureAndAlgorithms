@@ -2,6 +2,10 @@ package com.lee.datastructureandalgorithms.leetcode;
 
 import java.util.*;
 
+/**
+ * 字母异位词分组
+ * @author i324779
+ */
 public class Solution49 {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
