@@ -1,6 +1,7 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
 /**
+ * 下一个排列
  * @author D49450
  */
 public class Solution31 {
