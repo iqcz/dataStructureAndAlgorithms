@@ -7,6 +7,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution46 {
     public static void main(String[] args) {
+        // todo
         int[] data = {1,2,3};
     }
 
