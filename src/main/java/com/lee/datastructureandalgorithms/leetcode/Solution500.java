@@ -3,6 +3,9 @@ package com.lee.datastructureandalgorithms.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author D49450
+ */
 public class Solution500 {
     public String[] findWords(String[] words) {
         List<String> list = new ArrayList<>();
