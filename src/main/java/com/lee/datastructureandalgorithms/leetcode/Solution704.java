@@ -28,5 +28,7 @@ public class Solution704 {
         // bad code
         // too bad code.
 
+        // 2nd bad code
+        // 2nd too bad code.
     }
 }
