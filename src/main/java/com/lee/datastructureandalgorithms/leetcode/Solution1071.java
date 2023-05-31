@@ -6,6 +6,6 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution1071 {
     public String gcdOfStrings(String str1, String str2) {
-        return "":
+        return "";
     }
 }
