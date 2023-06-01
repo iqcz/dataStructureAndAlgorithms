@@ -25,6 +25,10 @@ public class Solution704 {
     }
 
     public static void main(String[] args) {
+        // bad code
+        // too bad code.
 
+        // 2nd bad code
+        // 2nd too bad code.
     }
 }
