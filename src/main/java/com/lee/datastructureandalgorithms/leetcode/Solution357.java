@@ -5,6 +5,6 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution357 {
     public int countNumbersWithUniqueDigits(int n) {
-
+        return -1;
     }
 }
