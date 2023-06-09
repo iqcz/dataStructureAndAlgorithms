@@ -39,6 +39,23 @@ public class InsertSort {
             }
         }
     }
+   /* public static void insertSort3(int[] a) {
+        for (int end = 1; end < a.length; end++) {
+            int newNumberIndex = end;
+            while (newNumberIndex - 1 >= 0 && a[newNumberIndex - 1] > a[newNumberIndex]) {
+                swap(a, newNumberIndex - 1, new); newNumberIndex--;
+            }
+        }
+    }*/
+
+   /* public static void insertSort4(int[] a) {
+        for (int end = 1; end < a.length; end++) {
+        // pre：新数的前一个位置
+            for (int pre = end - 1; pre >= 0 && a[pre] > a[pre + 1]; pre--) {
+                swap(a, pre, pre + 1);
+            }
+        }
+    }*/
 
     public static void main(String[] args) {
         int[] a = {3, 2, 5, 99, 34, 21, 98};
