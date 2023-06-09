@@ -10,7 +10,9 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] data = {4, 5, 6, 3, 2, 1};
 
-        bubbleSort(data);
+//        bubbleSort(data);
+//        System.out.println(Arrays.toString(data));
+        bubbleSortII(data);
         System.out.println(Arrays.toString(data));
     }
 
@@ -31,6 +33,21 @@ public class BubbleSort {
             }
             if (!flag) {
                 break;
+            }
+        }
+    }
+
+    public static void bubbleSortII(int [] data) {
+        if (data == null || data.length < 2) {
+            return;
+        };
+        for (int end = data.length - 1; end >= 0; end--) {
+            for (int start = 1; start <= end; start++) {
+                if (data[start - 1] > data[start]) {
+                    int temp = data[start - 1];
+                    data[start - 1] = data[start];
+                    data[start] = temp;
+                }
             }
         }
     }
