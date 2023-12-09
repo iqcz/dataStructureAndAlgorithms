@@ -19,7 +19,7 @@ import java.util.Map;
  * 所以返回 [0, 1]
  * <p>
  * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/two-sum
+ * 链接：<a href="https://leetcode-cn.com/problems/two-sum">two-sum</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * <p>
  * 解题思路：使用哈希表
