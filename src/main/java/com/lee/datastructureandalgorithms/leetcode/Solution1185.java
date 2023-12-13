@@ -7,6 +7,6 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution1185 {
     public String dayOfTheWeek(int day, int month, int year) {
-       return "":
+       return "";
     }
 }
