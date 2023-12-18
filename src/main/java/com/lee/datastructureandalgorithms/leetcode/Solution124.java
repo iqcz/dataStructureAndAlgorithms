@@ -1,5 +1,8 @@
 package com.lee.datastructureandalgorithms.leetcode;
 
+/**
+ * @author D49450
+ */
 public class Solution124 {
     int maxValue = Integer.MIN_VALUE;
 
