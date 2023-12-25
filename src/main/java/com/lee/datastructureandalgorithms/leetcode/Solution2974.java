@@ -14,7 +14,7 @@ public class Solution2974 {
         for (int i = 1; i < nums.length; i += 2) {
             int tmp = nums[i - 1];
             nums[i - 1] = nums[i];
-            ;
+
             nums[i] = tmp;
         }
         return nums;
