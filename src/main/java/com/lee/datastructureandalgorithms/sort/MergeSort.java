@@ -8,24 +8,28 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static void mergeSort(int[] arr, int left, int right) {
+        // 校验
         if (arr == null || arr.length == 0) {
             return;
         }
 
+        // 终止条件
         if (left >= right) {
             return;
         }
 
+        // 一分为二，防止越界
         int mid = left + ((right - left) >> 1);
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
+
         // 分完了，要进行合并
         merge(arr, left, mid, right);
 
     }
 
     private static void merge(int[] arr, int left, int middle, int right) {
-        // 借助一个临时数组保存合并的数据
+        // 借助一个临时数组保存合并的数据，要额外申请内存空间
         int[] temp = new int[arr.length];
         // 左边第一个数的位置
         int leftBound = left;
