@@ -31,6 +31,7 @@ public class Solution204 {
                 return false;
             }
         }
+
         return true;
     }
 
