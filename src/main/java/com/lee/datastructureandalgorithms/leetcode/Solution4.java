@@ -23,7 +23,8 @@ public class Solution4 {
 
         for (int i = 0; i <= mergedLength / 2; i++) {
             left = right;
-            if (nums1Start < nums1Length && (nums2Start >= nums2Length || nums1[nums1Start] < nums2[nums2Start])) {
+            if (nums1Start < nums1Length &&
+                    (nums2Start >= nums2Length/*越界判断*/ || nums1[nums1Start] < nums2[nums2Start])) {
                 right = nums1[nums1Start++];
             } else {
                 right = nums2[nums2Start++];
