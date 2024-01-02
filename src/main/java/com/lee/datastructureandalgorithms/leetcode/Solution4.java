@@ -18,13 +18,14 @@ public class Solution4 {
         //  更新为最后一次循环的结果
         int right = -1;
 
+        // array pointer;
         int nums1Start = 0;
+        // array pointer;
         int nums2Start = 0;
 
         for (int i = 0; i <= mergedLength / 2; i++) {
             left = right;
-            if (nums1Start < nums1Length &&
-                    (nums2Start >= nums2Length/*越界判断*/ || nums1[nums1Start] < nums2[nums2Start])) {
+            if (nums1Start < nums1Length && (nums2Start >= nums2Length/*越界判断*/ || nums1[nums1Start] < nums2[nums2Start])) {
                 right = nums1[nums1Start++];
             } else {
                 right = nums2[nums2Start++];
