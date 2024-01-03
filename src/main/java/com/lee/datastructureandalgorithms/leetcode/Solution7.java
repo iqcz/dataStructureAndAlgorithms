@@ -7,7 +7,7 @@ package com.lee.datastructureandalgorithms.leetcode;
  */
 public class Solution7 {
     public static void main(String[] args) {
-        System.out.println("reverse(123) = " + reverse(-1345));
+        System.out.println("reverse(-1345) = " + reverse(-1345));
     }
 
     public static int reverse(int x) {
