@@ -22,7 +22,7 @@ public class Solution386 {
             return;
         }
         list.add(i);
-        for (int j = 0; j <= 9; j++) {
+        for (int j = 0; j < 10; j++) {
             dfs(n, i * 10 + j, list);
         }
     }
