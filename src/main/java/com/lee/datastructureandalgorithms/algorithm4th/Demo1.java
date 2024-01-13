@@ -1,5 +1,9 @@
 package com.lee.datastructureandalgorithms.algorithm4th;
 
+/**
+ * 最大公约数
+ * @author D49450
+ */
 public class Demo1 {
     public static int gcd(int p, int q) {
         if (q == 0) {
@@ -14,5 +18,4 @@ public class Demo1 {
         int gcd = gcd(10, 5);
         System.out.println("gcd = " + gcd);
     }
-
 }
