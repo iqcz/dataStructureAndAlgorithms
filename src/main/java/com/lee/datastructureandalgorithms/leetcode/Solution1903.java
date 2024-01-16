@@ -16,4 +16,10 @@ public class Solution1903 {
         // 未找到值为奇数的字符，返回空字符串
         return "";
     }
+
+    public static void main(String[] args) {
+        Solution1903 solution1903 = new Solution1903();
+        String s = solution1903.largestOddNumber("232");
+        System.out.println("s = " + s);
+    }
 }
