@@ -31,4 +31,9 @@ public class Solution202 {
         }
         return sum;
     }
+
+    public static void main(String[] args) {
+        Solution202 solution = new Solution202();
+        System.out.println("solution.isHappy(19) = " + solution.isHappy(19));
+    }
 }
