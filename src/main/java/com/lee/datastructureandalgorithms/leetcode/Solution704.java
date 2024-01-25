@@ -10,7 +10,7 @@ public class Solution704 {
         if (nums == null || nums.length == 0) {
             return -1;
         }
-        
+
         int length = nums.length;
 
         int left = 0;
