@@ -29,4 +29,10 @@ public class Solution728 {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        Solution728 solution728 = new Solution728();
+        List<Integer> integers = solution728.selfDividingNumbers(127, 200);
+        System.out.println("integers = " + integers);
+    }
 }
