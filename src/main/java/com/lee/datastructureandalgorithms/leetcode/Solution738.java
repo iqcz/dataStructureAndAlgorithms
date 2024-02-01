@@ -27,7 +27,7 @@ public class Solution738 {
 
     public static void main(String[] args) {
         Solution738 solution738 = new Solution738();
-        int num = solution738.monotoneIncreasingDigits(332);
+        int num = solution738.monotoneIncreasingDigits(10);
         System.out.println("num = " + num);
     }
 }
