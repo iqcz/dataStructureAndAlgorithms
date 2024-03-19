@@ -9,6 +9,8 @@ public class Solution80 {
             return -1;
         }
 
+        // todo wrong
+
         int left = 0;
         boolean seeTwice = false;
         for (int i = 1; i < nums.length; i++) {
