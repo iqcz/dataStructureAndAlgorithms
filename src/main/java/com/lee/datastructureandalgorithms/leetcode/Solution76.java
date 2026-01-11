@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class Solution76 {
     public String minWindow(String s, String t) {
-        if (s.length() == 0 || t.length() == 0) {
+        if (s.isEmpty() || t.isEmpty()) {
             return "";
         }
         int left = 0, right = 0;
@@ -19,7 +19,7 @@ public class Solution76 {
             tMap.put(c, tMap.getOrDefault(c, 0) + 1);
         }
 
-        int required = tMap.keySet().size(), formed = 0;
+        int required = tMap.size(), formed = 0;
         Map<Character, Integer> windowMap = new HashMap<>();
 
         // ans[0] 存放字符长度，ans[1]和ans[2]分别存放左右索引
