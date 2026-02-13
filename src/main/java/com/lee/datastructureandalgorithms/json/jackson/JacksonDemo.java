@@ -20,5 +20,6 @@ public class JacksonDemo {
         JsonNode age = object2.get("age");
         int i = age.asInt();
         System.out.println(i);
+
     }
 }
