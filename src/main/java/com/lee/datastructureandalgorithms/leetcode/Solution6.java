@@ -19,15 +19,16 @@ public class Solution6 {
             rows.add(new StringBuilder());
         }
 
-        int i = 0;
+        int index = 0;
         int flag = -1;
         for (char c : s.toCharArray()) {
-            rows.get(i).append(c);
-            if (i == 0 || i == numRows - 1) {
+            rows.get(index).append(c);
+            if (index == 0 || index == numRows - 1) {
                 flag = -flag;
             }
-            i += flag;
+            index += flag;
         }
+
         StringBuilder res = new StringBuilder();
         for (StringBuilder row : rows) {
             res.append(row);
@@ -36,6 +37,6 @@ public class Solution6 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution6().convert("PAYPALISHIRING", 3));
+        System.out.println(new Solution6().convert("PAYPALISHIRING", 4));
     }
 }
