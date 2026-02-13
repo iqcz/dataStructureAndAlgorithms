@@ -17,7 +17,5 @@ public class Demo1 {
     public static void main(String[] args) {
         int gcd = gcd(10, 5);
         System.out.println("gcd = " + gcd);
-
-        System.out.println("Hi, AI!");
     }
 }
