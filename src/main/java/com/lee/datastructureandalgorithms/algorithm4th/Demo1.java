@@ -15,7 +15,7 @@ public class Demo1 {
     }
 
     public static void main(String[] args) {
-        int gcd = gcd(10, 5);
+        int gcd = gcd(10, 4);
         System.out.println("gcd = " + gcd);
     }
 }
