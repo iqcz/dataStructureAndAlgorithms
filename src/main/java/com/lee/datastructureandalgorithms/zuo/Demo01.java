@@ -10,7 +10,7 @@ public class Demo01 {
     }
 
     public String convertBinary(int num) {
-        var result = new StringBuilder();
+        StringBuilder result = new StringBuilder();
         for (int i = 31; i >= 0; i--) {
             result.append((num & (1 << i)) == 0 ? "0" : "1");
         }
